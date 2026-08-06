@@ -14,20 +14,20 @@
 
   <main class="gallery-locked">
     <div class="container-large">
-      <a href="media.html" class="back">&larr; All galleries</a>
+      <a href="media.html" class="back" data-i18n="gal.back">&larr; All galleries</a>
       <div class="mt-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
-          <p class="eyebrow">Private participant gallery</p>
-          <h1 class="mt-3 font-serif text-4xl md:text-6xl">Human+Tech Programme</h1>
+          <p class="eyebrow" data-i18n="gal.lock.eyebrow">Private participant gallery</p>
+          <h1 class="mt-3 font-serif text-4xl md:text-6xl" data-i18n="gal.lock.human">Human+Tech Programme</h1>
         </div>
       </div>
       <div class="lock-box">
-        <h2>Enter participant password</h2>
-        <p class="hint">Use the password supplied by Sapiens Nova Academy.</p>
+        <h2 data-i18n="gal.lock.title">Enter participant password</h2>
+        <p class="hint" data-i18n="gal.lock.hint">Use the password supplied by Sapiens Nova Academy.</p>
         <form id="gallery-login" data-success-url="gallery.html">
-          <input id="gallery-password" type="password" required autocomplete="current-password" placeholder="Gallery password">
+          <input id="gallery-password" type="password" required autocomplete="current-password" placeholder="Gallery password" data-i18n-attr="placeholder:gal.lock.ph">
           <p id="login-error" class="err"></p>
-          <button type="submit" class="submit">Unlock gallery</button>
+          <button type="submit" class="submit" data-i18n="gal.lock.submit">Unlock gallery</button>
         </form>
       </div>
     </div>

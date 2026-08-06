@@ -202,14 +202,17 @@
         var loc = document.createElement("span");
         loc.className = "featured-badge-loc";
         loc.textContent = p.location;
+        loc.setAttribute("data-i18n", "fd." + p.slug + ".loc");
 
         var h3 = document.createElement("h3");
         h3.className = "featured-title";
         h3.textContent = p.name;
+        h3.setAttribute("data-i18n", "fd." + p.slug + ".title");
 
         var desc = document.createElement("p");
         desc.className = "featured-desc";
         desc.textContent = p.description;
+        desc.setAttribute("data-i18n", "fd." + p.slug + ".desc");
 
         card.appendChild(mediaWrap);
         card.appendChild(loc);
@@ -332,8 +335,10 @@
           p.style.display = p.getAttribute("data-tab-panel") === id ? "" : "none";
         });
         if (mobileLabel) {
-          mobileLabel.textContent = tabs[activeIndex].textContent;
-          mobileLabel.title = tabs[activeIndex].textContent;
+          var lbl = tabs[activeIndex].getAttribute("data-i18n");
+          var label = lbl ? snT(lbl) : tabs[activeIndex].textContent;
+          mobileLabel.textContent = label;
+          mobileLabel.title = label;
         }
         if (mobilePrev) mobilePrev.disabled = activeIndex === 0;
         if (mobileNext) mobileNext.disabled = activeIndex === tabs.length - 1;
@@ -349,6 +354,7 @@
         if (bar.offsetWidth > 0) { clearInterval(initTimer); showTab(0, true); }
       }, 50);
       setTimeout(function () { showTab(0, true); }, 100);
+      document.addEventListener("sn-lang-change", function () { showTab(activeIndex, true); });
     });
 
     /* слайдеры внутри карточек трек-рекорда */
@@ -403,7 +409,7 @@
         if (pass === demo) {
           window.location.href = form.getAttribute("data-success-url") || "gallery.html";
         } else {
-          if (err) { err.style.display = "block"; err.textContent = "Incorrect password. Please try again."; }
+          if (err) { err.style.display = "block"; err.textContent = snT("gal.lock.err") || "Incorrect password. Please try again."; }
         }
       });
     });
@@ -427,40 +433,44 @@
     function renderOrder() {
       var p = selectedProgramme();
       if (!p) {
-        order.innerHTML = '<p style="color:rgb(0 0 0 / 0.6); text-align:center; padding:3rem 0;">Select a programme to see details</p>';
+        order.innerHTML = '<p style="color:rgb(0 0 0 / 0.6); text-align:center; padding:3rem 0;" data-i18n="ck.summary.none">' + snT("ck.summary.none") + '</p>';
         return;
       }
+      var pTitle = snT("fd." + p.slug + ".title") || p.name;
+      var pLoc = snT("fd." + p.slug + ".loc") || p.location;
       var html = "";
       html +=
         '<div style="position:relative; width:100%; height:10rem; border-radius:24px; overflow:hidden; margin-bottom:1.5rem;">' +
-        '<img src="' + p.image + '" alt="' + p.name + '" style="width:100%; height:100%; object-fit:cover;"></div>';
-      html += '<h3 style="font-size:1.25rem; margin-bottom:0.5rem; font-family:var(--font-serif);">' + p.name + "</h3>";
+        '<img src="' + p.image + '" alt="' + pTitle + '" style="width:100%; height:100%; object-fit:cover;"></div>';
+      html += '<h3 style="font-size:1.25rem; margin-bottom:0.5rem; font-family:var(--font-serif);">' + pTitle + "</h3>";
       html += '<span style="background:var(--program-cornfield); padding:0.25rem 0.75rem; border-radius:9999px; display:inline-block; margin-bottom:0.75rem;"><span style="font-size:0.875rem; color:#fff; text-transform:capitalize;">' + p.category + "</span></span>";
-      html += '<p style="font-size:0.875rem; color:rgb(0 0 0 / 0.6); margin-bottom:0.25rem;">Duration: ' + p.duration_text + "</p>";
-      html += '<p style="font-size:0.875rem; color:rgb(0 0 0 / 0.6);">Location: ' + p.location + "</p>";
+      html += '<p style="font-size:0.875rem; color:rgb(0 0 0 / 0.6); margin-bottom:0.25rem;"><span data-i18n="ck.summary.duration">' + snT("ck.summary.duration") + ':</span> ' + p.duration_text + "</p>";
+      html += '<p style="font-size:0.875rem; color:rgb(0 0 0 / 0.6);"><span data-i18n="ck.summary.location">' + snT("ck.summary.location") + ':</span> ' + pLoc + "</p>";
       html += '<div style="border-top:2px solid rgb(0 0 0 / 0.1); margin-top:1.5rem; padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">';
       if (p.application_fee) {
-        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);">Application Fee:</span><span>' + fmtMoney(p.application_fee, "GBP") + " " + p.currency + "</span></div>";
+        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.appfee">' + snT("ck.summary.appfee") + ':</span><span>' + fmtMoney(p.application_fee, "GBP") + " " + p.currency + "</span></div>";
       }
       if (p.deposit) {
-        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);">Deposit:</span><span>' + fmtMoney(p.deposit, "HKD") + " " + p.currency + "</span></div>";
+        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.deposit">' + snT("ck.summary.deposit") + ':</span><span>' + fmtMoney(p.deposit, "HKD") + " " + p.currency + "</span></div>";
       }
       var price = fmtMoney(p.price_cents, p.currency);
       if (p.early_bird_price_cents) {
-        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);">Programme Fee:</span>' +
+        var earlyKey = p.slug === "imperial-motorsport" ? "ck.early.imperial" : "ck.early.human";
+        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.progfee">' + snT("ck.summary.progfee") + ':</span>' +
           '<div style="text-align:right;"><span style="color:#b45309; font-weight:500;">' + fmtMoney(p.early_bird_price_cents, p.currency) + " " + p.currency + "</span>" +
           '<span style="display:block; font-size:0.75rem; color:rgb(0 0 0 / 0.4); text-decoration:line-through;">' + price + " " + p.currency + "</span>" +
-          '<span style="display:block; font-size:0.75rem; color:#d97706;">Early bird – offer ends 30 Mar 2026</span></div></div>';
+          '<span style="display:block; font-size:0.75rem; color:#d97706;" data-i18n="' + earlyKey + '">' + snT(earlyKey) + "</span></div></div>";
       } else {
-        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);">Programme Fee:</span><span>' + price + " " + p.currency + "</span></div>";
+        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.progfee">' + snT("ck.summary.progfee") + ':</span><span>' + price + " " + p.currency + "</span></div>";
       }
       html += "</div>";
       var charge = p.application_fee ? fmtMoney(p.application_fee, p.currency) : p.deposit ? fmtMoney(p.deposit, p.currency) : fmtMoney(p.price_cents, p.currency);
+      var chargeKey = p.application_fee ? "ck.summary.appfee" : p.deposit ? "ck.summary.deposit" : "ck.summary.progfee";
       html += '<div style="border-top:1px solid rgb(0 0 0 / 0.1); margin-top:1rem; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">' +
-        '<div><p style="font-size:1.25rem; font-family:var(--font-serif);">' + (p.application_fee ? "Application Fee" : p.deposit ? "Deposit" : "Programme Fee") + '</p>' +
-        '<p style="font-size:0.75rem; color:rgb(0 0 0 / 0.6);">Charging now</p></div>' +
+        '<div><p style="font-size:1.25rem; font-family:var(--font-serif);" data-i18n="' + chargeKey + '">' + snT(chargeKey) + '</p>' +
+        '<p style="font-size:0.75rem; color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.charging">' + snT("ck.summary.charging") + '</p></div>' +
         '<p style="font-size:1.5rem; font-family:var(--font-serif);">' + charge + " " + p.currency + "</p></div>";
-      html += '<div style="background:color-mix(in srgb, var(--program-cornfield) 30%, transparent); padding:1rem; border-radius:20px; margin-top:1rem;"><p style="font-size:0.875rem; color:rgb(0 0 0 / 0.8);">You&#39;ll receive a confirmation email after completing your payment</p></div>';
+      html += '<div style="background:color-mix(in srgb, var(--program-cornfield) 30%, transparent); padding:1rem; border-radius:20px; margin-top:1rem;"><p style="font-size:0.875rem; color:rgb(0 0 0 / 0.8);" data-i18n="ck.summary.confirm">' + snT("ck.summary.confirm") + "</p></div>";
       order.innerHTML = html;
       if (orderMobile) orderMobile.innerHTML = html;
     }
@@ -473,22 +483,24 @@
         select.value = pid;
       }
       renderOrder();
+      document.addEventListener("sn-lang-change", renderOrder);
     }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var errors = {};
+      function errText(key, fallback) { return snT(key) || fallback; }
       var inputs = {
-        programme: "Please select a programme",
-        email: "Your Email is required",
-        relationship: "Relationship to student is required",
-        student_firstName: "Student's First name is required",
-        student_lastName: "Student's Last name is required",
-        student_age: "Student's age is required",
-        student_school: "Student's school is required",
-        student_country: "Student's country is required",
-        firstName: "Your First name is required",
-        lastName: "Your Last name is required"
+        programme: errText("ck.err.programme", "Please select a programme"),
+        email: errText("ck.err.email.required", "Your Email is required"),
+        relationship: errText("ck.err.relationship", "Relationship to student is required"),
+        student_firstName: errText("ck.err.student_firstName", "Student's First name is required"),
+        student_lastName: errText("ck.err.student_lastName", "Student's Last name is required"),
+        student_age: errText("ck.err.student_age", "Student's age is required"),
+        student_school: errText("ck.err.student_school", "Student's school is required"),
+        student_country: errText("ck.err.student_country", "Student's country is required"),
+        firstName: errText("ck.err.firstName", "Your First name is required"),
+        lastName: errText("ck.err.lastName", "Your Last name is required")
       };
       var firstError = null;
       Object.keys(inputs).forEach(function (key) {
@@ -499,10 +511,10 @@
           errors[key] = inputs[key];
           if (errEl) errEl.textContent = inputs[key];
         } else if (key === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-          errors[key] = "Please enter a valid email address";
+          errors[key] = errText("ck.err.email.format", "Please enter a valid email address");
           if (errEl) errEl.textContent = errors[key];
         } else if (key === "student_age" && (isNaN(Number(val)) || Number(val) < 1 || Number(val) > 100)) {
-          errors[key] = "Please enter a valid age (1-100)";
+          errors[key] = errText("ck.err.age", "Please enter a valid age (1-100)");
           if (errEl) errEl.textContent = errors[key];
         } else if (errEl) {
           errEl.textContent = "";
@@ -512,7 +524,7 @@
       var gender = document.getElementById("student_sex");
       var genderErr = document.getElementById("student_sex-error");
       if (!gender || !gender.value) {
-        if (genderErr) genderErr.textContent = "Student's gender is required";
+        if (genderErr) genderErr.textContent = errText("ck.err.gender", "Student's gender is required");
         if (!firstError) firstError = "student_sex";
       } else if (genderErr) { genderErr.textContent = ""; }
 
@@ -526,7 +538,7 @@
       note.style.cssText =
         "margin-top:1.5rem; padding:1rem; border-radius:16px; background:#f0fdf4; border:1px solid #bbf7d0; color:#166534; text-align:center; font-size:0.95rem;";
       note.textContent =
-        "Demo mode: in the original site this form creates a Stripe checkout session via POST /api/checkout. Enrollment data is not sent in this static copy.";
+        snT("ck.demo.note") || "Demo mode: in the original site this form creates a Stripe checkout session via POST /api/checkout. Enrollment data is not sent in this static copy.";
       form.appendChild(note);
     });
   }
@@ -542,7 +554,7 @@
     apply.addEventListener("click", function () {
       var code = input ? input.value.trim() : "";
       if (!code) {
-        if (error) { error.textContent = "Please enter a discount code"; error.style.display = "block"; }
+        if (error) { error.textContent = snT("ck.promo.err") || "Please enter a discount code"; error.style.display = "block"; }
         if (success) success.style.display = "none";
         return;
       }
@@ -733,7 +745,7 @@
   }
 
   function snT(key, lang) {
-    var d = SN_I18N[lang] || SN_I18N.en;
+    var d = SN_I18N[lang || snLang()] || SN_I18N.en;
     return d[key] != null ? d[key] : (SN_I18N.en[key] != null ? SN_I18N.en[key] : null);
   }
 
@@ -773,6 +785,7 @@
     var t = snT("page.title", lang);
     if (t) document.title = t;
     try { localStorage.setItem("sn-lang", lang); } catch (e) {}
+    document.dispatchEvent(new CustomEvent("sn-lang-change", { detail: { lang: lang } }));
   }
 
   function initLangSwitcher() {
