@@ -1,0 +1,57 @@
+{
+  "source": "https://www.sapiens-nova.com — Tailwind v4 (breakpoints по умолчанию) + кастомные контейнеры",
+  "breakpoints": {
+    "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "2xl": "1536px",
+    "note": "Хедер переключается на десктопную сетку на md (768px); hero-кенбургс переключается на десктоп на md"
+  },
+  "containers": {
+    "container-large": { "max-width": "1150px-1280px", "margin": "0 auto", "padding-x": "16-24px", "note": "Используется в хедере и секциях; в футере аналог max-w-[1150px] px-6" },
+    "max-w-7xl": { "max-width": "1280px", "margin": "0 auto", "padding": "24px 16px (py-10 px-6)", "role": "Секции программ" },
+    "max-w-6xl": { "max-width": "1152px", "role": "Чекаут" },
+    "max-w-4xl": { "max-width": "896px", "role": "Who We Are (text-center)" },
+    "max-w-3xl": { "max-width": "768px", "role": "Описания" }
+  },
+  "spacing-scale": {
+    "base": "4px-инкремент (Tailwind): 1=4px, 2=8px, 3=12px, 4=16px, 5=20px, 6=24px, 8=32px, 10=40px, 12=48px, 16=64px, 20=80px, 24=96px",
+    "section-vertical": { "py-24": "96px", "py-20": "80px", "md:py-32": "128px", "md:py-24": "96px" },
+    "section-gap": "space-y-8 (32px) внутри контентных блоков",
+    "card-padding": "p-6 (24px) / p-8 (32px) / p-10 (40px)",
+    "grid-gaps": { "programs-cards": "gap-8 / gap-12 (featured)", "cards-2col": "gap-8", "footer-cols": "gap-12 lg:gap-16" },
+    "hero-padding": { "top": "clamp(7rem, 20vw, 314px)", "bottom": "clamp(5rem, 12vw, 156px)" },
+    "checkout-padding-top": "clamp(8rem, 15vw, 180px)"
+  },
+  "grid-layouts": {
+    "header-desktop": "grid-cols-3 (левая навигация / логотип по центру / правая навигация), gap-6",
+    "header-mobile": "flex row: логотип + кнопка меню, мобильное меню-панель 85% ширины / sm:400px",
+    "programs-alternating": "flex-col md:flex-row, чередование flex-row-reverse (even), gap-x-12",
+    "founders-desktop": "абсолютное позиционирование 3 карточек на слое lg (left calc(50%±...), z-index 10/20/15)",
+    "founders-mobile": "flex-col, карточки в колонку max-w-[320px]",
+    "checkout": "grid-cols-1 lg:grid-cols-3 (форма 2 колонки + sticky Order Summary 1 колонка)",
+    "footer": "grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_300px_400px]"
+  },
+  "radii": {
+    "btn-pill": "9999px (rounded-full)",
+    "hero-cta": "30px",
+    "card-checkout": "35px (rounded-[35px])",
+    "card-program": "rounded-2xl (16px)",
+    "card-founder": "rounded-[24px]",
+    "media-card": "rounded-3xl (24px)",
+    "inputs": "rounded-[20px]",
+    "badge-pill": "9999px",
+    "tab-pill-active": "rounded-lg (8px)"
+  },
+  "shadows": {
+    "card": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) (shadow-lg)",
+    "card-xl": "shadow-xl (0 20px 25px -5px rgb(0 0 0/0.1), 0 8px 10px -6px rgb(0 0 0/0.1))",
+    "header": "0 1px 2px 0 rgb(0 0 0 / 0.05) (shadow-sm)"
+  },
+  "motion": {
+    "marquee": "translate(-50%) за 70s linear infinite (бегущая строка hero + отзывы)",
+    "ken-burns": "scale 1→1.1 за 20s ease-out (десктоп); 0.95→1.05 (мобайл)",
+    "slideshow-interval": "5000ms, crossfade opacity 1000ms",
+    "hover-card": "scale-105, rotate-0 (из -6°..+5°), z-10, translate-y, duration-300",
+    "nav-hover": "opacity-70",
+    "btn-hover": "opacity-90 scale-105 (hero CTA); bg-/90 (обычные)",
+    "mobile-menu": "translate-x-full→0 за 500ms, overlay fade 300ms"
+  }
+}

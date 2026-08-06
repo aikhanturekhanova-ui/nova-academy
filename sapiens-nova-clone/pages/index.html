@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A dynamic educational institution preparing young adults for careers as venture capitalists, entrepreneurs, and technology professionals through innovative programmes in Hong Kong, Thailand, Japan, China, UK, and Saudi Arabia.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sapiens Nova Academy - Embrace Your Future: Innovate, Heal, Inspire">
+  <meta property="og:description" content="A dynamic educational institution preparing young adults for careers as venture capitalists, entrepreneurs, and technology professionals through innovative programmes in Hong Kong, Thailand, Japan, China, UK, and Saudi Arabia.">
+  <meta property="og:image" content="../assets/images/og-image.png">
+  <meta property="og:site_name" content="Sapiens Nova Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Sapiens Nova Academy - Embrace Your Future: Innovate, Heal, Inspire</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased sn-home">
+
+  <a class="sn-skip" href="#main-content" data-i18n="skip">Skip to content</a>
+
+  <!-- ============ HEADER (flat nav, 3 items + one CTA) ============ -->
+  <header class="site-header sn-header">
+    <div class="sn-header-inner">
+      <a href="index.html" class="sn-logo-link" aria-label="Sapiens Nova Academy — Home">
+        <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo sn-nav-logo">
+      </a>
+      <nav class="sn-nav" aria-label="Primary">
+        <a href="index.html#who-we-are" class="sn-nav-link" data-i18n="nav.who">Who We Are</a>
+        <a href="programs.html" class="sn-nav-link" data-i18n="nav.programs">Programmes</a>
+        <a href="media.html" class="sn-nav-link" data-i18n="nav.galleries">Galleries</a>
+      </nav>
+      <div class="sn-header-actions">
+<div class="sn-lang sn-lang-header" data-sn-lang>
+          <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            <span data-sn-lang-current>EN</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+            <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+          </ul>
+        </div>
+        <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="cta.enrol">Enrol Now</a>
+        <button id="mobile-menu-btn" class="menu-btn sn-menu-btn" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label:menu.open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div id="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" aria-label="Mobile navigation">
+    <div class="sn-mobile-head">
+      <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo">
+      <button id="mobile-menu-close" class="close-btn sn-close-btn" aria-label="Close menu" data-i18n-attr="aria-label:menu.close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <nav class="sn-mobile-nav">
+      <a href="index.html#who-we-are" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.who">Who We Are</span></a>
+      <a href="programs.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.programs">Programmes</span></a>
+      <a href="media.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.galleries">Galleries</span></a>
+      <a href="index.html#footer" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.contact">Get in Touch</span></a>
+    </nav>
+    <div class="sn-side-lang">
+            <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+            <div class="sn-side-lang-grid" role="group" aria-label="Language">
+              <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+            </div>
+          </div>
+    <div class="sn-mobile-cta-row">
+      <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ============ HERO: one headline, one sub-line, one primary CTA ============ -->
+    <section id="hero-section" class="hero-section sn-hero">
+      <div class="hero-bg">
+        <div class="hero-image" data-index="0" style="opacity:1;">
+          <img src="../assets/images/hero-chula-venture-01.webp" alt="" loading="eager" style="object-position:center top;" class="animate-ken-burns">
+        </div>
+        <div class="hero-image" data-index="1" style="opacity:0;">
+          <img src="../assets/images/hero-chula-venture-final-pitch.webp" alt="" loading="lazy" decoding="async" style="object-position:65% top;">
+        </div>
+        <div class="hero-image" data-index="2" style="opacity:0;">
+          <img src="../assets/images/hero-chula-venture-team-5.webp" alt="" loading="lazy" decoding="async" style="object-position:center top;">
+        </div>
+        <div class="hero-image" data-index="3" style="opacity:0;">
+          <img src="../assets/images/hero-web3-hackathon-ksa-04.webp" alt="" loading="lazy" decoding="async" style="object-position:center top;">
+        </div>
+        <div class="hero-overlay-h"></div>
+        <div class="hero-overlay-v"></div>
+      </div>
+
+      <div class="sn-hero-content">
+        <h1 id="hero-heading" class="sn-hero-title" data-i18n-html="hero.title">Embrace Your Future:<br>Innovate, Heal, Inspire</h1>
+        <p class="sn-hero-sub" data-i18n="hero.sub">We prepare young adults for future careers as venture capitalists, entrepreneurs, and technology professionals — through transformative programmes across Hong Kong, Thailand, Japan, China, the UK and Saudi Arabia.</p>
+        <div id="hero-ctas" class="sn-hero-actions">
+          <a href="checkout.html" class="hero-cta sn-cta sn-cta-light sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+          <a href="programs.html" class="sn-hero-link" data-i18n="hero.explore">Explore Programmes</a>
+        </div>
+      </div>
+
+      <div class="sn-hero-dots" data-sn-hero-dots role="group" aria-label="Choose hero slide" data-i18n-attr="aria-label:hero.dots"></div>
+
+      <button type="button" class="sn-hero-cue" data-scroll-cue aria-label="Scroll to explore" data-i18n-attr="aria-label:hero.scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+      </button>
+
+      <div class="sn-marquee" data-sn-marquee>
+        <div class="sn-marquee-track" data-sn-marquee-track>
+          <div class="sn-marquee-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+            <span data-i18n="marquee">Enrollment for Summer Programmes is now open</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT: who we are ============ -->
+    <section id="who-we-are" class="sn-section sn-statement">
+      <div class="sn-container">
+        <div class="sn-eyebrow" data-reveal data-i18n="statement.eyebrow">Who We Are</div>
+        <h2 class="sn-h2" data-reveal data-i18n="statement.title">Empowering Future Leaders Through Innovation</h2>
+        <p class="sn-lead" data-reveal data-i18n="statement.lead">Sapiens Nova Academy is a dynamic educational institution developing tailored, interactive insights in technology, innovation, venture investment and entrepreneurship — transformative education that unlocks each student's potential.</p>
+
+        <ul class="sn-pillars" data-reveal>
+          <li class="sn-pillar">
+            <span class="sn-pillar-num">01</span>
+            <h3 data-i18n="pillar.innovate.title">Innovate</h3>
+            <p data-i18n="pillar.innovate.desc">Hands-on venture building, hackathons and technology boot camps in the world's most dynamic innovation hubs.</p>
+          </li>
+          <li class="sn-pillar">
+            <span class="sn-pillar-num">02</span>
+            <h3 data-i18n="pillar.heal.title">Heal</h3>
+            <p data-i18n="pillar.heal.desc">Research-backed psychology and personal development tools that build resilience, purpose and lasting habits.</p>
+          </li>
+          <li class="sn-pillar">
+            <span class="sn-pillar-num">03</span>
+            <h3 data-i18n="pillar.inspire.title">Inspire</h3>
+            <p data-i18n="pillar.inspire.desc">Art, culture and performance experiences that unlock creativity and confidence in every learner.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ OUR PROGRAMMES: clean card grid ============ -->
+    <section id="programs" class="sn-section sn-programmes">
+      <div class="sn-container">
+        <div class="sn-section-head" data-reveal>
+          <div class="sn-eyebrow" data-i18n="programs.eyebrow">Our Programmes</div>
+          <h2 class="sn-h2" data-i18n="programs.title">Comprehensive Programmes for Future Leaders</h2>
+          <p class="sn-lead" data-i18n="programs.lead">Equipping young adults for future careers in technology, entrepreneurship and venture investment — with well-being, art and culture woven throughout the journey.</p>
+        </div>
+
+        <div class="sn-programme-grid">
+          <!-- Venture Building -->
+          <article class="sn-pcard" data-reveal>
+            <div class="sn-pcard-media"><img src="../assets/images/programme-venture-building.webp" alt="Venture Building and Innovation" loading="lazy" decoding="async"></div>
+            <div class="sn-pcard-body">
+              <span class="sn-pcard-num">01</span>
+              <h3 class="sn-pcard-title" data-i18n="pcard.venture.title">Venture Building &amp; Innovation</h3>
+              <p class="sn-pcard-loc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-i18n="pcard.venture.loc">Hong Kong · Japan · Thailand · Saudi Arabia · UK</span></p>
+              <p class="sn-pcard-desc" data-i18n="pcard.venture.desc">An immersive international entrepreneurship experience — boot camps, hackathons and innovation workshops in the world's leading innovation hubs.</p>
+              <button class="find-out-more-btn sn-pcard-link" data-programme-name="Venture Building and Innovation"><span data-i18n="pcard.more">Find out more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </article>
+          <!-- Well-Being -->
+          <article class="sn-pcard" data-reveal>
+            <div class="sn-pcard-media"><img src="../assets/images/programme-personal-growth.jpg" alt="Well-Being" loading="lazy" decoding="async"></div>
+            <div class="sn-pcard-body">
+              <span class="sn-pcard-num">02</span>
+              <h3 class="sn-pcard-title" data-i18n="pcard.wellbeing.title">Well-Being</h3>
+              <p class="sn-pcard-loc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-i18n="pcard.wellbeing.loc">Hong Kong</span></p>
+              <p class="sn-pcard-desc" data-i18n="pcard.wellbeing.desc">Research-backed psychology and practical tools for building emotional resilience, clarity of purpose and sustainable success habits.</p>
+              <button class="find-out-more-btn sn-pcard-link" data-programme-name="Well-Being"><span data-i18n="pcard.more">Find out more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </article>
+          <!-- Art and Culture -->
+          <article class="sn-pcard" data-reveal>
+            <div class="sn-pcard-media"><img src="../assets/images/programme-art-culture.webp" alt="Art and Culture" loading="lazy" decoding="async"></div>
+            <div class="sn-pcard-body">
+              <span class="sn-pcard-num">03</span>
+              <h3 class="sn-pcard-title" data-i18n="pcard.art.title">Art &amp; Culture</h3>
+              <p class="sn-pcard-loc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-i18n="pcard.art.loc">Awaji Island, Japan</span></p>
+              <p class="sn-pcard-desc" data-i18n="pcard.art.desc">Music performance, professional coaching and Japanese animation workshops at a world-class theatre on Awaji Island, Japan.</p>
+              <button class="find-out-more-btn sn-pcard-link" data-programme-name="Art and Culture"><span data-i18n="pcard.more">Find out more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </article>
+          <!-- SNA Institute -->
+          <article class="sn-pcard" data-reveal>
+            <div class="sn-pcard-media"><img src="../assets/images/programme-sna-institute.webp" alt="SNA Institute" loading="lazy" decoding="async"></div>
+            <div class="sn-pcard-body">
+              <span class="sn-pcard-num">04</span>
+              <h3 class="sn-pcard-title" data-i18n="pcard.sna.title">SNA Institute</h3>
+              <p class="sn-pcard-loc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-i18n="pcard.sna.loc">Hong Kong</span></p>
+              <p class="sn-pcard-desc" data-i18n="pcard.sna.desc">Structured mentorship and customised R&amp;D programmes for ambitious young talents in technology, innovation and venture building.</p>
+              <button class="find-out-more-btn sn-pcard-link" data-programme-name="SNA Institute"><span data-i18n="pcard.more">Find out more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Currently available programmes (rendered from programme data) -->
+        <div class="sn-featured-mount" data-featured></div>
+
+        <!-- Primary CTA repeated after programmes -->
+        <div class="sn-mid-cta" data-reveal>
+          <p class="sn-mid-cta-text" data-i18n="midcta">Ready to become tomorrow's founder?</p>
+          <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROOF POINTS ============ -->
+    <section class="sn-stats">
+      <div class="sn-container sn-stats-grid">
+        <div class="sn-stat" data-reveal><strong>6</strong><span data-i18n="stats.countries">Countries</span></div>
+        <div class="sn-stat" data-reveal><strong>4</strong><span data-i18n="stats.programs">Core Programmes</span></div>
+        <div class="sn-stat" data-reveal><strong>2</strong><span data-i18n="stats.schools">Flagship Summer Schools</span></div>
+        <div class="sn-stat" data-reveal><strong>16+</strong><span data-i18n="stats.nationalities">Student Nationalities</span></div>
+      </div>
+    </section>
+
+    <!-- ============ LIFE AT SAPIENS NOVA: photo strip ============ -->
+    <section class="sn-photostrip" id="life">
+      <div class="sn-container">
+        <div class="sn-section-head" data-reveal>
+          <span class="sn-eyebrow" data-i18n="life.eyebrow">Our Community</span>
+          <h2 class="sn-h2" data-i18n="life.title">Life at Sapiens Nova</h2>
+          <p class="sn-lead" data-i18n="life.lead">From hackathons in Hong Kong and Riyadh to venture camps at Chulalongkorn and tech workshops at BISP — moments from our programmes around the world.</p>
+        </div>
+      </div>
+      <div class="sn-photostrip-row" data-reveal>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-web3-01.webp" alt="Nextg3n Web3 Hackathon participants in Riyadh" loading="lazy" decoding="async"><figcaption data-i18n="photo1">Web3 Hackathon — Riyadh</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-chula-team7.webp" alt="Team 7 at the Chulalongkorn venture building programme" loading="lazy" decoding="async"><figcaption data-i18n="photo2">Venture Building — Chula</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-bisp-01.webp" alt="Tech &amp; AI workshop at BISP campus, Phuket" loading="lazy" decoding="async"><figcaption data-i18n="photo3">Tech &amp; AI — BISP Phuket</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-chula-02.webp" alt="Bootcamp session at Chulalongkorn University" loading="lazy" decoding="async"><figcaption data-i18n="photo4">Chulalongkorn Bootcamp</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-web3-02.webp" alt="Web3 hackathon session in Saudi Arabia" loading="lazy" decoding="async"><figcaption data-i18n="photo5">Web3 Hackathon — KSA</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-bisp-02.webp" alt="Students collaborating at the BISP Tech &amp; AI workshop" loading="lazy" decoding="async"><figcaption data-i18n="photo6">BISP Workshop</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-chula-03.webp" alt="Innovation session at Chulalongkorn University" loading="lazy" decoding="async"><figcaption data-i18n="photo7">Chulalongkorn Camp</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-web3-03.webp" alt="Nextg3n hackathon teams presenting" loading="lazy" decoding="async"><figcaption data-i18n="photo8">Hackathon — Riyadh</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-chula-05.webp" alt="Venture building participants at Chulalongkorn" loading="lazy" decoding="async"><figcaption data-i18n="photo9">Venture Building — Chula</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-web3-05.webp" alt="Web3 hackathon networking in Saudi Arabia" loading="lazy" decoding="async"><figcaption data-i18n="photo10">Web3 Hackathon — KSA</figcaption></figure>
+        <figure class="sn-photostrip-item"><img src="../assets/images/track-web3-06.webp" alt="Web3 hackathon closing session" loading="lazy" decoding="async"><figcaption data-i18n="photo11">Hackathon Closing</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS: one clean rotating carousel ============ -->
+    <section id="stories" class="sn-section sn-testimonials">
+      <div class="sn-container">
+        <div class="sn-section-head" data-reveal>
+          <div class="sn-eyebrow" data-i18n="stories.eyebrow">Student Voices</div>
+          <h2 class="sn-h2" data-i18n="stories.title">Student Success Stories</h2>
+        </div>
+
+        <div class="sn-carousel" data-sn-carousel data-reveal>
+          <div class="sn-carousel-viewport">
+            <div class="sn-carousel-track">
+              <figure class="sn-t-card">
+                <div class="sn-t-quote" aria-hidden="true">&ldquo;</div>
+                <blockquote><p data-i18n="t1">The 15-week venture building programme at Chulalongkorn University was transformative. I learned AI coding, built a robotic arm, and pitched my startup idea to real investors.</p></blockquote>
+                <figcaption><strong>Alex Chen</strong><span data-i18n="role1">BAScii Student</span></figcaption>
+              </figure>
+              <figure class="sn-t-card">
+                <div class="sn-t-quote" aria-hidden="true">&ldquo;</div>
+                <blockquote><p data-i18n="t2">Attending the HKU Summer Institute boot camp was incredible. The hands-on robotics sessions and mentorship from venture capitalists gave me insights I couldn't get anywhere else.</p></blockquote>
+                <figcaption><strong>Emma Rodriguez</strong><span data-i18n="role2">Year 12 Student</span></figcaption>
+              </figure>
+              <figure class="sn-t-card">
+                <div class="sn-t-quote" aria-hidden="true">&ldquo;</div>
+                <blockquote><p data-i18n="t3">The Tech Boot Camp at Imperial College London exceeded all expectations. Working with industry experts and learning about AI in real-world scenarios gave me the confidence to pursue computer science at university.</p></blockquote>
+                <figcaption><strong>James Thompson</strong><span data-i18n="role3">Year 11 Student</span></figcaption>
+              </figure>
+              <figure class="sn-t-card">
+                <div class="sn-t-quote" aria-hidden="true">&ldquo;</div>
+                <blockquote><p data-i18n="t4">The Future by Design psychology programme helped me understand myself better through MBTI assessments and personal development coaching with incredible guidance from the Cambridge psychologist.</p></blockquote>
+                <figcaption><strong>Sarah Patel</strong><span data-i18n="role4">Year 10 Student</span></figcaption>
+              </figure>
+              <figure class="sn-t-card">
+                <div class="sn-t-quote" aria-hidden="true">&ldquo;</div>
+                <blockquote><p data-i18n="t5">Participating in the Nextg3n Web3 Hackathon in Riyadh was a game-changer. Meeting students from 16 different countries opened my eyes to global opportunities in technology and innovation.</p></blockquote>
+                <figcaption><strong>Mohammed Al-Fahad</strong><span data-i18n="role5">University Student</span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="sn-carousel-controls">
+            <button type="button" class="sn-car-arrow" data-car-prev aria-label="Previous testimonial" data-i18n-attr="aria-label:carousel.prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <div class="sn-car-dots" data-car-dots role="group" aria-label="Choose testimonial" data-i18n-attr="aria-label:carousel.dots"></div>
+            <button type="button" class="sn-car-arrow" data-car-next aria-label="Next testimonial" data-i18n-attr="aria-label:carousel.next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <span class="sn-car-count" data-sn-car-count aria-hidden="true">1 / 5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEET OUR FOUNDERS: clean profile cards ============ -->
+    <section id="founders" class="sn-section sn-founders">
+      <div class="sn-container">
+        <div class="sn-section-head" data-reveal>
+          <div class="sn-eyebrow" data-i18n="founders.eyebrow">Meet Our Founders</div>
+          <h2 class="sn-h2" data-i18n="founders.title">World-Class Expertise Guiding Your Journey</h2>
+          <p class="sn-lead" data-i18n="founders.lead">Our founding team unites exceptional expertise from prestigious global institutions — AI and robotics research at Imperial College London, venture capital leadership at HKSTP Ventures, and an Education and Psychology Adviser from Cambridge University.</p>
+        </div>
+
+        <div class="sn-founder-grid">
+          <!-- Benny Lo -->
+          <article class="sn-fcard" data-reveal>
+            <div class="sn-fphoto"><img src="../assets/images/founder-benny-lo.webp" alt="Ir Professor Benny Lo" loading="lazy" decoding="async"></div>
+            <h3 class="sn-fname">Ir Professor Benny Lo</h3>
+            <p class="sn-frole" data-i18n="f.role.cofounder">co-Founder</p>
+            <ul class="sn-fcreds">
+              <li data-i18n="creds.b1">co-Founder, AiVanse Technology Ltd</li>
+              <li data-i18n="creds.b2">Visiting Reader, Imperial College London</li>
+              <li data-i18n="creds.b3">PhD in Computing, Imperial College London</li>
+            </ul>
+            <details class="sn-fbio">
+              <summary data-i18n="f.bio">View full bio</summary>
+              <ul>
+                <li>co-Founder, AiVanse Technology Ltd</li>
+                <li>Chief Scientific Officer, Precision Robotics Research Institute</li>
+                <li>Visiting Reader, Imperial College London</li>
+                <li>Adjunct Professor, Chulalongkorn University</li>
+                <li>Former Reader, Hamlyn Centre for Robotic Surgery, Imperial College London</li>
+                <li>Vice Chairman, HK Medical and Healthcare Foundation</li>
+                <li>Executive Committee Member, HK Automation Technology Council (FHKI)</li>
+                <li>Council Member, Hong Kong Innovative Technology Development Association (HKITDA)</li>
+                <li>Fellow of Hong Kong Institute of Engineers (HKIE)</li>
+                <li>PhD in Computing — Imperial College London</li>
+              </ul>
+            </details>
+            <div class="sn-fsocials">
+              <a href="https://www.linkedin.com/in/benny-lo-290599/?originalSubdomain=hk" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Visit Ir Professor Benny Lo's LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=zRd3g5cAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Visit Ir Professor Benny Lo's Google Scholar profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"></path></svg>
+              </a>
+            </div>
+          </article>
+          <!-- Sammi Wong -->
+          <article class="sn-fcard" data-reveal>
+            <div class="sn-fphoto"><img src="../assets/images/founder-sammi-wong.webp" alt="Professor Sammi Wong" loading="lazy" decoding="async" style="object-position:center 15%;"></div>
+            <h3 class="sn-fname">Professor Sammi Wong</h3>
+            <p class="sn-frole" data-i18n="f.role.cofounder">co-Founder</p>
+            <ul class="sn-fcreds">
+              <li data-i18n="creds.s1">Founding Partner, Turbulentos Ventures</li>
+              <li data-i18n="creds.s2">Former Founding Leader, US$120M HKSTP Ventures</li>
+              <li data-i18n="creds.s3">Adjunct Professor, Chulalongkorn University</li>
+            </ul>
+            <details class="sn-fbio">
+              <summary data-i18n="f.bio">View full bio</summary>
+              <ul>
+                <li>Founding Partner of venture studio, Turbulentos Ventures</li>
+                <li>Former Founding Leader, US$120M HKSTP Ventures</li>
+                <li>Adjunct Professor, Chulalongkorn University</li>
+                <li>Council Member, Asian Fund for Cancer Research</li>
+                <li>Chief Advisor, HK Startup Council (FHKI)</li>
+                <li>Senior Advisor, w3 ff Venture Builder (web3 venture studio in Saudi Arabia)</li>
+              </ul>
+            </details>
+            <div class="sn-fsocials">
+              <a href="https://www.linkedin.com/in/sammi-wong-04948a5/" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Visit Professor Sammi Wong's LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+          </article>
+          <!-- Rina Lai -->
+          <article class="sn-fcard" data-reveal>
+            <div class="sn-fphoto"><img src="../assets/images/founder-rina-lai.webp" alt="Dr Rina Lai" loading="lazy" decoding="async" style="object-position:center 15%;"></div>
+            <h3 class="sn-fname">Dr Rina Lai</h3>
+            <p class="sn-frole" data-i18n="f.role.advisor">Education &amp; Psychology Advisor</p>
+            <ul class="sn-fcreds">
+              <li data-i18n="creds.r1">Ph.D. in Education and Psychology, Cambridge University</li>
+              <li data-i18n="creds.r2">Associate, Faculty of Psychology, Cambridge University</li>
+              <li data-i18n="creds.r3">Fellow, Royal Society of Arts</li>
+            </ul>
+            <details class="sn-fbio">
+              <summary data-i18n="f.bio">View full bio</summary>
+              <ul>
+                <li>Founder, SynergisED (Research and Innovation Lab)</li>
+                <li>Community Representative, Kennedy School Council, ESF Hong Kong</li>
+                <li>Associate, Faculty of Psychology, Cambridge University</li>
+                <li>Fellow, Royal Society of Arts</li>
+                <li>Spearheaded various international projects</li>
+                <li>Ph.D. in Education and Psychology, Cambridge University</li>
+              </ul>
+            </details>
+            <div class="sn-fsocials">
+              <a href="https://www.linkedin.com/in/rina-lai/?originalSubdomain=hk" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Visit Dr Rina Lai's LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA: primary CTA repeated before footer ============ -->
+    <section class="sn-section sn-cta-band">
+      <div class="sn-container sn-cta-band-inner" data-reveal>
+        <h2 class="sn-cta-title" data-i18n="cta.title">Embrace Your Future</h2>
+        <p class="sn-cta-sub" data-i18n="cta.sub">Join young leaders from around the world building the ventures of tomorrow.</p>
+        <div class="sn-cta-row">
+          <a href="checkout.html" class="sn-cta sn-cta-inverse sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+          <a href="programs.html" class="sn-cta sn-cta-outline-inverse sn-cta-lg" data-i18n="hero.explore">Explore Programmes</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="site-footer sn-footer">
+    <div class="sn-footer-inner">
+      <div class="sn-footer-grid">
+        <div class="sn-footer-brand">
+          <img src="../assets/images/logo.png" alt="Sapiens Nova Academy">
+          <p data-i18n="footer.brand">Embrace Your Future: Innovate, Heal, Inspire.</p>
+          <div class="sn-footer-socials">
+            <a href="https://www.linkedin.com/company/the-sapiens-nova-academy/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Sapiens Nova Academy on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/sapiensnovaacademy" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Sapiens Nova Academy on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1Y3rBy748u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Sapiens Nova Academy on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="sn-footer-col" aria-label="Explore">
+          <h3 data-i18n="footer.explore">Explore</h3>
+          <a href="index.html#who-we-are" data-i18n="f.who">Who We Are</a>
+          <a href="programs.html" data-i18n="f.programs">Programmes</a>
+          <a href="media.html" data-i18n="f.galleries">Galleries</a>
+          <a href="checkout.html" data-i18n="f.enrol">Enrol Now</a>
+        </nav>
+        <nav class="sn-footer-col" aria-label="Featured programmes">
+          <h3 data-i18n="footer.featured">Featured</h3>
+          <a href="programme-imperial.html" data-i18n="f.imperial">Imperial Motorsport Summer School</a>
+          <a href="programme-human-tech.html" data-i18n="f.human">Human+Tech Summer Camp</a>
+          <a href="programs.html" data-i18n="f.core">Core Programmes</a>
+          <a href="index.html#stories" data-i18n="f.students">What Our Students Say</a>
+        </nav>
+        <div class="sn-footer-col">
+          <h3 data-i18n="footer.contact">Contact</h3>
+          <a href="mailto:info@sapiens-nova.com">info@sapiens-nova.com</a>
+          <a href="https://sapiens-nova.com" target="_blank" rel="noopener noreferrer">sapiens-nova.com</a>
+          <a href="data-privacy-terms.html" data-i18n="f.privacyTerms">Data Privacy Terms</a>
+        </div>
+      </div>
+      <div class="sn-footer-bottom">
+        <p data-i18n="f.rights">&copy; 2026 Sapiens Nova. All rights reserved.</p>
+        <div class="sn-footer-bottom-links">
+          <a href="data-privacy-terms.html" data-i18n="f.privacy">Privacy Policy</a>
+          <a href="data-privacy-terms.html" data-i18n="f.tos">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Чат-виджет Sapiens AI -->
+  <button class="chat-widget" aria-label="Open chat" data-i18n-attr="aria-label:chat">
+    <img src="../assets/icons/sapiens-logo.svg" alt="Sapiens AI">
+  </button>
+
+  <!-- Mobile primary CTA (thumb-reach, appears after the hero) -->
+  <div class="sn-mobile-cta" id="sn-mobile-cta" aria-hidden="true">
+    <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+  </div>
+
+  <!-- Back to top (desktop) -->
+  <button type="button" class="sn-to-top" id="sn-to-top" aria-label="Back to top" data-i18n-attr="aria-label:totop">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

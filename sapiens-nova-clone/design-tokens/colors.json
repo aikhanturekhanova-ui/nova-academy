@@ -1,0 +1,49 @@
+{
+  "$schema": "https://sapiens-nova-clone.local/design-tokens/colors.json",
+  "source": "https://www.sapiens-nova.com (извлечено из /_astro/cancel.CsmBUkhm.css, 02.08.2026)",
+  "tokens": {
+    "brand-primary": { "hex": "#2563EB", "role": "Основной акцентный (кнопки, пилюли, табы, активные элементы)", "rgb": "37 99 235", "note": "Tailwind blue-600. В оригинале используется напрямую и через псевдонимы brand-coral / brand-orange / brand-green" },
+    "brand-primary-light": { "hex": "#DBEAFE", "role": "Светлый акцент (фон кнопки 'Learn More', фон hero-CTA 'ENROL NOW', маркировка)", "rgb": "219 234 254" },
+    "brand-azure": { "hex": "#AA63EB", "role": "Фиолетовый (карточки программ, фон карточки Sammi Wong, кнопка 'Proceed to Payment')", "rgb": "170 99 235" },
+    "brand-navy": { "hex": "#111827", "role": "Тёмный графит (заголовки, основной текст, тёмные карточки)", "rgb": "17 24 39" },
+    "brand-stromboli": { "hex": "#111827", "role": "Тёмный (карточки программ #2, карточка отзыва, карточка Imperial на главной)", "rgb": "17 24 39" },
+    "brand-coral": { "hex": "#2563EB", "role": "Псевдоним brand-primary (кнопка 'MEET OUR TEAM', карточка Rina Lai)", "rgb": "37 99 235" },
+    "brand-coral-light": { "hex": "#DBEAFE", "role": "Псевдоним brand-primary-light", "rgb": "219 234 254" },
+    "brand-coral-accent": { "hex": "#2563EB", "role": "Зарезервированный акцент", "rgb": "37 99 235" },
+    "brand-orange": { "hex": "#2563EB", "role": "Зарезервированный (исторический псевдоним — см. примечание о ребрендинге)", "rgb": "37 99 235" },
+    "brand-green": { "hex": "#2563EB", "role": "Зарезервированный (исторический псевдоним)", "rgb": "37 99 235" },
+    "bg-linen": { "hex": "#EEFFFF", "role": "Светло-мятный фон секций (hero-подложки, Who We Are, Featured Programmes, карточки)", "rgb": "238 255 255" },
+    "bg-cream": { "hex": "#FFFFFF", "role": "Фон секции отзывов (объявлен как cream, фактически белый)", "rgb": "255 255 255" },
+    "bg-sage": { "hex": "#F9FAFB", "role": "Фон футера (gray-50)", "rgb": "249 250 251" },
+    "text-primary": { "hex": "#111827", "role": "Основной текст", "rgb": "17 24 39" },
+    "text-secondary": { "hex": "#FFFFFF", "role": "Белый текст на тёмном", "rgb": "255 255 255" },
+    "text-muted": { "hex": "#6B7280", "role": "Приглушённый текст (gray-500)", "rgb": "107 114 128" },
+    "text-accent": { "hex": "#2563EB", "role": "Акцентный текст (ссылки, активные состояния)", "rgb": "37 99 235" },
+    "text-black": { "hex": "#000000", "role": "Чистый чёрный (заголовки секций, кнопки с белым текстом на light-фоне)", "rgb": "0 0 0" },
+    "color-black": { "hex": "#000000", "role": "Системный чёрный" },
+    "color-white": { "hex": "#FFFFFF", "role": "Системный белый" }
+  },
+  "programme-aliases": {
+    "program-cornfield": "brand-primary (#2563EB) — жёлтая пилюля 'cornfield' в текущей версии переопределена на синий",
+    "program-coral": "brand-coral (#2563EB)",
+    "program-azure": "brand-azure (#AA63EB)",
+    "program-stromboli": "brand-stromboli (#111827)",
+    "program-linen": "bg-linen (#EEFFFF)",
+    "program-light-coral": "brand-coral-light (#DBEAFE)"
+  },
+  "gradients-overlays": {
+    "hero-overlay-horizontal": "linear-gradient(to right, rgba(0,0,0,0.80), rgba(0,0,0,0.60), rgba(0,0,0,0.30))",
+    "hero-overlay-vertical": "linear-gradient(to bottom, rgba(0,0,0,0.40), transparent, rgba(0,0,0,0.60))",
+    "hero-text-shadow": "0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3)"
+  },
+  "derived-opacities": {
+    "white-90": "rgba(255,255,255,0.9) — текст описания на тёмных карточках",
+    "white-60": "rgba(255,255,255,0.6) — второстепенный текст в чекауте",
+    "black-10": "rgba(0,0,0,0.1) — бордеры чекаут-формы",
+    "black-40": "rgba(0,0,0,0.4) — зачёркнутая цена",
+    "black-60": "rgba(0,0,0,0.6) — приглушённый текст чекаута",
+    "black-70": "rgba(0,0,0,0.7) — текст 'Registration Is Closed'",
+    "black-80": "rgba(0,0,0,0.8) — текст подсказки в чекауте"
+  },
+  "redesign-note": "Названия токенов (cornfield, coral, azure, stromboli, linen) указывают на исходную многоцветную палитру в средиземноморской гамме. Текущая live-версия (02.2026+) переопределяет coral/orange/green/cornfield на синий #2563EB — сайт фактически монохромно-синий с фиолетовым акцентом #AA63EB. Для редизайна рекомендуется восстановить исходную палитру."
+}

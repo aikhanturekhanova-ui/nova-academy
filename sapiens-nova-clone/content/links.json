@@ -1,0 +1,35 @@
+{
+  "internal": [
+    { "href": "/", "label": "Home" },
+    { "href": "/#who-we-are", "label": "Who We Are (якорь главной)" },
+    { "href": "/#footer", "label": "Footer (якорь)" },
+    { "href": "/programs", "label": "Programmes" },
+    { "href": "/media", "label": "Galleries" },
+    { "href": "/media/human-tech", "label": "Private gallery: Human+Tech" },
+    { "href": "/media/imperial-motorsport", "label": "Private gallery: Imperial Motorsport" },
+    { "href": "/checkout", "label": "Enroll Now (форма записи)" },
+    { "href": "/checkout?programmeId={id}", "label": "Запись на конкретную программу" },
+    { "href": "/programmes/{id|slug}", "label": "Детальная страница программы" },
+    { "href": "/data-privacy-terms", "label": "Data Privacy Terms / Privacy Policy" },
+    { "href": "/logo.png", "label": "Логотип (хедер)" },
+    { "href": "/sapiens-logo.svg", "label": "Логотип Sapiens AI (чат-виджет)" },
+    { "href": "/advanced-research.webp", "label": "Изображение SNA Institute" }
+  ],
+  "external": [
+    { "href": "https://www.linkedin.com/in/benny-lo-290599/?originalSubdomain=hk", "label": "LinkedIn — Ir Professor Benny Lo" },
+    { "href": "https://scholar.google.com/citations?user=zRd3g5cAAAAJ&hl=en", "label": "Google Scholar — Benny Lo" },
+    { "href": "https://www.linkedin.com/in/sammi-wong-04948a5/", "label": "LinkedIn — Professor Sammi Wong" },
+    { "href": "https://www.linkedin.com/in/rina-lai/?originalSubdomain=hk", "label": "LinkedIn — Dr Rina Lai" },
+    { "href": "https://www.linkedin.com/company/the-sapiens-nova-academy/posts/?feedView=all", "label": "LinkedIn компании (футер)" },
+    { "href": "https://www.instagram.com/sapiensnovaacademy", "label": "Instagram (футер)" },
+    { "href": "https://www.facebook.com/share/1Y3rBy748u/?mibextid=wwXIfr", "label": "Facebook (футер)" },
+    { "href": "mailto:info@sapiens-nova.com", "label": "Email (футер + кнопки 'Find out more' с subject-шаблоном 'Enquiry: SNA {programme} programme')" },
+    { "href": "https://sapiens-nova.com", "label": "Website (футер)" }
+  ],
+  "action": [
+    { "href": "mailto:info@sapiens-nova.com?subject=Enquiry: SNA Venture Building and Innovation programme", "label": "Find out more — Venture Building" },
+    { "href": "mailto:info@sapiens-nova.com?subject=Enquiry: SNA Well-Being programme", "label": "Find out more — Well-Being" },
+    { "href": "mailto:info@sapiens-nova.com?subject=Enquiry: SNA Art and Culture programme", "label": "Find out more — Art and Culture" },
+    { "href": "mailto:info@sapiens-nova.com?subject=Enquiry: SNA SNA Institute programme", "label": "Find out more — SNA Institute" }
+  ]
+}

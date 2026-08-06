@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Sapiens Nova Academy programmes - customised learning experiences in technology, innovation, entrepreneurship and venture capital.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon.ico">
+  <title>Programmes - Sapiens Nova Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="container-large">
+      <div class="mobile-only nav-row">
+        <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+      <div class="nav-row desktop-only" style="display:grid;">
+        <div class="nav-left">
+          <a href="index.html#who-we-are" class="nav-link" data-i18n="nav.who">WHO WE ARE</a>
+          <a href="programs.html" class="nav-link" data-i18n="nav.programs">PROGRAMMES</a>
+          <a href="media.html" class="nav-link" data-i18n="nav.galleries">GALLERIES</a>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
+        </div>
+        <div class="nav-right">
+          <a href="checkout.html" class="nav-link" data-i18n="cta.enrol">ENROL NOW</a>
+          <a href="index.html#footer" class="nav-link" data-i18n="nav.contact">CONTACT</a>
+          <a href="checkout.html" class="btn-enrol-nav" data-i18n="cta.enrol">ENROL NOW</a>
+        <div class="sn-lang sn-lang-header" data-sn-lang>
+                  <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    <span data-sn-lang-current>EN</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                  </button>
+                  <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+                    <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+                  </ul>
+                </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" aria-label="Mobile navigation">
+    <button id="mobile-menu-close" class="close-btn" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <nav>
+      <a href="index.html#who-we-are" class="mobile-nav-link"><span data-i18n="nav.who">WHO WE ARE</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="programs.html" class="mobile-nav-link"><span data-i18n="nav.programs">PROGRAMMES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="media.html" class="mobile-nav-link"><span data-i18n="nav.galleries">GALLERIES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="checkout.html" class="mobile-nav-link"><span data-i18n="cta.enrol">ENROL NOW</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="index.html#footer" class="mobile-nav-link"><span data-i18n="nav.contact">GET IN TOUCH</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+    </nav>
+    <div class="sn-side-lang">
+            <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+            <div class="sn-side-lang-grid" role="group" aria-label="Language">
+              <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+            </div>
+          </div>
+  </aside>
+
+  <!-- ============ HERO ============ -->
+  <section class="programs-hero">
+    <div class="inner">
+      <div class="grid">
+        <div class="copy">
+          <div>
+            <span class="pill" style="padding:0.625rem 1.5rem;"><span style="font-size:1rem;">Innovative Education</span></span>
+          </div>
+          <h1>Unlock Your Future</h1>
+          <p>Sapiens Nova Academy is dedicated to developing tailored, interactive insights in technology, innovation, venture investment, and entrepreneurship. We prepare young adults for future careers as venture capitalists, entrepreneurs, and technology professionals.</p>
+          <div class="w-full lg:hidden" style="max-width:400px; margin:0 auto;">
+            <img src="../assets/images/visual-orange.webp" alt="" style="width:100%;">
+          </div>
+          <a href="#customised-programmes" class="btn-explore">EXPLORE PROGRAMMES</a>
+        </div>
+        <div class="visual">
+          <div class="frame">
+            <div class="halo"><img src="../assets/images/visual-orange.webp" alt=""></div>
+            <div class="scene">
+              <img src="../assets/images/visual-orange.webp" alt="" style="height:100%; width:auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PROGRAMMES ============ -->
+  <section class="section bg-white" style="padding:6rem 0;">
+    <div class="max-w-7xl" style="padding:2.5rem 1.5rem;">
+      <div class="pill" style="margin-bottom:1rem;"><span class="pill-xl">Featured Programmes</span></div>
+      <h2 class="font-serif" style="font-size:1.875rem; font-weight:600; letter-spacing:-0.03em; margin-bottom:1rem;">Featured Programmes</h2>
+      <p class="text-muted-foreground" style="font-size:1.125rem; margin-bottom:2rem;">Explore our flagship summer programmes designed for future innovators and leaders.</p>
+      <section class="section bg-linen" style="padding:0;" data-featured></section>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOMISED PROGRAMMES ============ -->
+  <section id="customised-programmes" class="section bg-white" style="padding:6rem 0;">
+    <div class="max-w-7xl" style="padding:2.5rem 1.5rem;">
+      <div class="pill" style="margin-bottom:1rem;"><span class="pill-xl">Customised Programmes</span></div>
+      <h2 class="font-serif" style="font-size:2.25rem; font-weight:600; letter-spacing:-0.03em; max-width:36rem;">Tailored Learning Experiences</h2>
+      <p class="text-muted-foreground" style="margin-top:0.5rem; font-size:1.125rem;">Our customised programmes focus on innovation, entrepreneurship, and technology. From boot camps to psychology courses, we offer diverse opportunities for growth.</p>
+
+      <div class="space-y-20" style="margin-top:4rem;">
+        <!-- AI / Robotics -->
+        <div class="service-row">
+          <div class="service-media" style="background:var(--bg-linen);">
+            <img src="../assets/images/workshop-image1.webp" alt="AI and Robotics workshop participants">
+          </div>
+          <div class="service-body">
+            <span class="service-badge">AI / Robotics</span>
+            <h4>AI / Robotics</h4>
+            <p>The AI Robotics Programme is a fast-paced, hands-on programme designed for innovators, engineers, developers, and tech enthusiasts who want to build intelligent robotic systems in a collaborative, high-energy environment. Unlike traditional academic programmes, this bootcamp focuses on practical implementation, rapid prototyping, and real-world problem solving. Participants learn by building – working in teams to design, train, and deploy AI-powered robotic systems over an intensive short-term format.</p>
+            <button class="btn-learn">Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+        <!-- Personal Growth -->
+        <div class="service-row even">
+          <div class="service-media" style="background:var(--brand-azure);">
+            <img src="../assets/images/programme-personal-growth.jpg" alt="Personal Growth">
+          </div>
+          <div class="service-body">
+            <span class="service-badge">Personal Growth</span>
+            <h4>Personal Growth</h4>
+            <p>The Personal Growth Programme is a transformative course designed to help individuals gain deeper insight into their personality, strengths, motivations, and interpersonal style through structured psychometric assessment and guided reflection. At the heart of the programme is the use of the Myers-Briggs Type Indicator (MBTI), one of the world&#39;s most widely used personality frameworks. Participants explore how psychological preferences influence decision-making, communication style, stress responses, leadership approach, and personal development pathways. This course goes beyond labels. It provides practical tools for self-awareness, confidence building, emotional intelligence, and intentional growth.</p>
+            <button class="btn-learn">Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+        <!-- Start-up / VC -->
+        <div class="service-row">
+          <div class="service-media" style="background:var(--brand-stromboli);">
+            <img src="../assets/images/hero-chula-venture-final-pitch.webp" alt="Start-up pitch presentation">
+          </div>
+          <div class="service-body">
+            <span class="service-badge">Start-up/VC</span>
+            <h4>Start-up &amp; Venture Capital</h4>
+            <p>The Start-up &amp; Venture Capital Programme is an intensive, experience-driven course designed for aspiring founders, early-stage startups, and innovation-driven professionals seeking to understand the venture capital ecosystem while actively participating in it. This programme goes beyond classroom theory. It is structured around live pitching sessions, startup competitions, and professional sharing forums with experienced founders, venture capitalists, and industry leaders. Participants gain first-hand exposure to how investment decisions are made, how startups are evaluated, and what truly differentiates fundable ventures.</p>
+            <button class="btn-learn">Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+        <!-- Workshops -->
+        <div class="service-row even">
+          <div class="service-media" style="background:var(--brand-coral);">
+            <img src="../assets/images/programme-sna-institute.webp" alt="Workshop session with participants">
+          </div>
+          <div class="service-body">
+            <span class="service-badge">Workshops</span>
+            <h4>Workshops</h4>
+            <p>This dynamic workshop series is designed to provide participants with immersive, practical experiences across four interconnected domains shaping today&#39;s global landscape: ESG and sustainability leadership, Japanese culture and business philosophy, and the evolving creative industries. Each workshop emphasizes experiential learning, collaborative exercises, case discussions, and real-world application rather than passive lectures. Participants gain practical tools, cross-cultural insights, and innovation-oriented mindsets applicable to both corporate and entrepreneurial settings.</p>
+            <button class="btn-learn">Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR TRACK RECORD ============ -->
+  <section class="section bg-linen" style="padding:6rem 0; overflow:hidden;">
+    <div class="container-large" style="padding:0 1.5rem;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:3rem;">
+        <div class="text-center max-w-[800px]" style="display:flex; flex-direction:column; align-items:center; gap:1rem;">
+          <span class="pill" style="padding:0.625rem 1.5rem;"><span style="font-size:1rem;">Our Track Record</span></span>
+          <h2 style="font-size:2.25rem; line-height:1.1; font-weight:500; color:#000;">Proven Excellence</h2>
+          <p style="font-size:1.125rem; line-height:1.6; color:rgb(17 24 39 / 0.8);">Delivering innovative programmes that combine technology, entrepreneurship, and hands-on learning.</p>
+        </div>
+
+        <div style="width:100%; max-width:1152px;">
+          <div class="tabs-bar">
+            <div data-tabs>
+              <div class="tabs-mobile">
+                <button class="tab-btn-m" data-tab-prev aria-label="Previous programme">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+                </button>
+                <div class="current" data-current-label>HKU Summer Institute Nextgen Entrepreneurs Boot Camp</div>
+                <button class="tab-btn-m" data-tab-next aria-label="Next programme">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+              </div>
+              <div class="tabs-desktop">
+                <div class="track">
+                  <ul>
+                    <li class="active-indicator"></li>
+                    <li data-tab-id="hku-summer-institute">HKU Summer Institute Nextgen Entrepreneurs Boot Camp</li>
+                    <li data-tab-id="chulalongkorn-venture">Chulalongkorn Venture Building Programme</li>
+                    <li data-tab-id="nextg3n-web3">Nextg3n Web3 Hackathon - KSA</li>
+                    <li data-tab-id="tech-ai-workshop">Tech &amp; AI Workshop - BISP</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Панель 1: HKU -->
+          <div class="track-card" data-tab-panel="hku-summer-institute">
+            <div class="track-media" data-track-slider>
+              <div class="track-slides" data-slides>
+                <img src="../assets/images/workshop-image1.webp" alt="HKU Summer Institute participants in a workshop">
+              </div>
+              <button class="track-nav prev" data-slide-prev aria-label="Previous slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button class="track-nav next" data-slide-next aria-label="Next slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+              <div class="track-dots" data-dots><button class="active" aria-label="Go to slide 1"></button></div>
+            </div>
+            <ul class="track-benefits">
+              <li><span class="check">&#10003;</span><span>Partnered with the HKU Summer Institute at the University of Hong Kong</span></li>
+              <li><span class="check">&#10003;</span><span>100+ students from Germany, Russia, the US, the UK, Taiwan, Thailand, Singapore, and China participated</span></li>
+              <li><span class="check">&#10003;</span><span>In teams, they explored Generative AI and Robotics, developed startup ideas, and pitched them to three female judges</span></li>
+              <li><span class="check">&#10003;</span><span>15+ guest speakers, including venture investors, entrepreneurs from various sectors, engineers from tech startups, and investment bankers</span></li>
+            </ul>
+          </div>
+
+          <!-- Панель 2: Chulalongkorn -->
+          <div class="track-card" data-tab-panel="chulalongkorn-venture" style="display:none;">
+            <div class="track-media" data-track-slider>
+              <div class="track-slides" data-slides>
+                <img src="../assets/images/hero-chula-venture-01.webp" alt="">
+                <img src="../assets/images/track-chula-02.webp" alt="">
+                <img src="../assets/images/track-chula-03.webp" alt="">
+                <img src="../assets/images/programme-venture-building.webp" alt="">
+                <img src="../assets/images/track-chula-05.webp" alt="">
+                <img src="../assets/images/hero-chula-venture-final-pitch.webp" alt="">
+                <img src="../assets/images/hero-chula-venture-team-5.webp" alt="">
+                <img src="../assets/images/track-chula-team7.webp" alt="">
+              </div>
+              <button class="track-nav prev" data-slide-prev aria-label="Previous slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button class="track-nav next" data-slide-next aria-label="Next slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+              <div class="track-dots" data-dots><button class="active"></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button></div>
+            </div>
+            <ul class="track-benefits">
+              <li><span class="check">&#10003;</span><span>15-week venture building programme for 110 first-year students</span></li>
+              <li><span class="check">&#10003;</span><span>Partner: School of Integrated Innovation, Chulalongkorn University</span></li>
+              <li><span class="check">&#10003;</span><span>Core academic course: AI coding, robotics, fundraising, and pitching</span></li>
+              <li><span class="check">&#10003;</span><span>Built robotic arms using 3D printers</span></li>
+              <li><span class="check">&#10003;</span><span>Interactive learning: Sapiens Game &amp; SuperNova Role Play</span></li>
+              <li><span class="check">&#10003;</span><span>Delivered as official university curriculum</span></li>
+            </ul>
+          </div>
+
+          <!-- Панель 3: Nextg3n Web3 -->
+          <div class="track-card" data-tab-panel="nextg3n-web3" style="display:none;">
+            <div class="track-media" data-track-slider>
+              <div class="track-slides" data-slides>
+                <img src="../assets/images/track-web3-01.webp" alt="">
+                <img src="../assets/images/track-web3-02.webp" alt="">
+                <img src="../assets/images/track-web3-03.webp" alt="">
+                <img src="../assets/images/hero-web3-hackathon-ksa-04.webp" alt="">
+                <img src="../assets/images/track-web3-05.webp" alt="">
+                <img src="../assets/images/track-web3-06.webp" alt="">
+              </div>
+              <button class="track-nav prev" data-slide-prev aria-label="Previous slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button class="track-nav next" data-slide-next aria-label="Next slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+              <div class="track-dots" data-dots><button class="active"></button><button></button><button></button><button></button><button></button><button></button></div>
+            </div>
+            <ul class="track-benefits">
+              <li><span class="check">&#10003;</span><span>100+ participants from 16 nationalities in Riyadh</span></li>
+              <li><span class="check">&#10003;</span><span>Co-organised with W3-FF Venture Builder (Munich)</span></li>
+              <li><span class="check">&#10003;</span><span>Venue: Princess Nourah Bint Abdulrahman University</span></li>
+              <li><span class="check">&#10003;</span><span>Over 40% female participation, 8 hacking teams</span></li>
+              <li><span class="check">&#10003;</span><span>Support from HRH Princess Nourah AlFaisal</span></li>
+              <li><span class="check">&#10003;</span><span>Established SNA presence in Saudi Arabia tech ecosystem</span></li>
+            </ul>
+          </div>
+
+          <!-- Панель 4: BISP -->
+          <div class="track-card" data-tab-panel="tech-ai-workshop" style="display:none;">
+            <div class="track-media" data-track-slider>
+              <div class="track-slides" data-slides>
+                <img src="../assets/images/track-bisp-01.webp" alt="">
+                <img src="../assets/images/track-bisp-02.webp" alt="">
+                <img src="../assets/images/programme-art-culture.webp" alt="">
+              </div>
+              <button class="track-nav prev" data-slide-prev aria-label="Previous slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button class="track-nav next" data-slide-next aria-label="Next slide">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+              <div class="track-dots" data-dots><button class="active"></button><button></button><button></button></div>
+            </div>
+            <ul class="track-benefits">
+              <li><span class="check">&#10003;</span><span>2-day immersive workshop for 20+ Grade 12 students</span></li>
+              <li><span class="check">&#10003;</span><span>Partner: British International School Phuket</span></li>
+              <li><span class="check">&#10003;</span><span>AI fundamentals, Generative AI, and robotics applications</span></li>
+              <li><span class="check">&#10003;</span><span>Team-based startup ideation and innovation</span></li>
+              <li><span class="check">&#10003;</span><span>Final pitch presentations to school management</span></li>
+              <li><span class="check">&#10003;</span><span>Built confidence in tech entrepreneurship and public speaking</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-dark.webp" alt="Sapiens Nova Academy">
+          <p data-i18n="footer.brand">Embrace Your Future: Innovate, Heal, Inspire</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/the-sapiens-nova-academy/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/sapiensnovaacademy" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1Y3rBy748u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="f.quick">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#who-we-are" data-i18n="f.who">WHO WE ARE</a></li>
+            <li><a href="programs.html" data-i18n="f.programs">PROGRAMMES</a></li>
+            <li><a href="media.html" data-i18n="f.galleries">GALLERIES</a></li>
+            <li><a href="checkout.html" data-i18n="f.enrol">ENROL NOW</a></li>
+            <li><a href="data-privacy-terms.html" data-i18n="f.privacyTerms">DATA PRIVACY TERMS</a></li>
+            <li><a href="index.html#footer" data-i18n="nav.contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h3 data-i18n="footer.contactus">Contact Us</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="field-label" data-i18n="f.email">Email</p>
+              <a href="mailto:info@sapiens-nova.com">info@sapiens-nova.com</a>
+            </div>
+            <div>
+              <p class="field-label" data-i18n="f.website">Website</p>
+              <a href="https://sapiens-nova.com" target="_blank" rel="noopener noreferrer">sapiens-nova.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="f.rights">&copy; 2026 Sapiens Nova. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="data-privacy-terms.html" data-i18n="f.privacy">Privacy Policy</a>
+          <a href="index.html#footer" data-i18n="f.tos">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chat-widget" aria-label="Open chat">
+    <img src="../assets/icons/sapiens-logo.svg" alt="Sapiens AI">
+  </button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

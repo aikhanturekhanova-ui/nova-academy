@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Human+Tech Futures Summer Camp - where future innovators learn to build technology that improves lives. 13-17 July 2026, Awaji Island, Japan. Ages 15-22.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon.ico">
+  <title>Human+Tech Futures Summer Camp - Sapiens Nova Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="container-large">
+      <div class="mobile-only nav-row">
+        <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+      <div class="nav-row desktop-only" style="display:grid;">
+        <div class="nav-left">
+          <a href="index.html#who-we-are" class="nav-link" data-i18n="nav.who">WHO WE ARE</a>
+          <a href="programs.html" class="nav-link" data-i18n="nav.programs">PROGRAMMES</a>
+          <a href="media.html" class="nav-link" data-i18n="nav.galleries">GALLERIES</a>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
+        </div>
+        <div class="nav-right">
+          <a href="checkout.html" class="nav-link" data-i18n="cta.enrol">ENROL NOW</a>
+          <a href="index.html#footer" class="nav-link" data-i18n="nav.contact">CONTACT</a>
+          <a href="checkout.html" class="btn-enrol-nav" data-i18n="cta.enrol">ENROL NOW</a>
+        <div class="sn-lang sn-lang-header" data-sn-lang>
+                  <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    <span data-sn-lang-current>EN</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                  </button>
+                  <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+                    <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+                  </ul>
+                </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" aria-label="Mobile navigation">
+    <button id="mobile-menu-close" class="close-btn" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <nav>
+      <a href="index.html#who-we-are" class="mobile-nav-link"><span data-i18n="nav.who">WHO WE ARE</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="programs.html" class="mobile-nav-link"><span data-i18n="nav.programs">PROGRAMMES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="media.html" class="mobile-nav-link"><span data-i18n="nav.galleries">GALLERIES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="checkout.html" class="mobile-nav-link"><span data-i18n="cta.enrol">ENROL NOW</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="index.html#footer" class="mobile-nav-link"><span data-i18n="nav.contact">GET IN TOUCH</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+    </nav>
+    <div class="sn-side-lang">
+            <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+            <div class="sn-side-lang-grid" role="group" aria-label="Language">
+              <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+            </div>
+          </div>
+  </aside>
+
+  <!-- ============ HERO ============ -->
+  <section class="pd-hero">
+    <div class="container-large">
+      <a href="programs.html" class="pd-back">&larr; All Programmes</a>
+      <p class="eyebrow" style="color:var(--brand-primary); text-transform:uppercase; letter-spacing:0.22em; font-weight:600; font-size:0.875rem;">Summer Camp</p>
+      <h1 class="pd-title font-serif">Human+Tech Futures Summer Camp</h1>
+      <p class="pd-desc">Where future innovators learn to build technology that improves lives. Through hands-on learning in AI, sensing, and robotics, students will create impactful prototypes that address real-world challenges in health and well-being. Guided by experts, participants gain exposure to innovation, entrepreneurship, and global collaboration, preparing them for a rapidly evolving future.</p>
+
+      <div class="pd-meta">
+        <span class="chip">July 13-17, 2026</span>
+        <span class="chip">Ages 15-22</span>
+        <span class="chip">English</span>
+        <span class="chip">Awaji Island, Japan</span>
+      </div>
+
+      <div class="pd-media">
+        <div class="stage">
+          <img src="../assets/images/programme-human-tech.jpg" alt="Human+Tech Futures Summer Camp" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+
+      <div class="pd-pricing">
+        <div class="pd-price-card">
+          <h3>Deposit</h3>
+          <p class="amount">HK$3,000.00</p>
+          <p class="note">Required to secure your place</p>
+        </div>
+        <div class="pd-price-card">
+          <h3>Programme Fee</h3>
+          <p class="amount">HK$15,000.00 <span style="font-size:0.875rem; color:#b45309;">Early Bird</span></p>
+          <p class="note"><span style="text-decoration:line-through; color:#9ca3af;">HK$17,000.00</span> &middot; Early Bird offer ends 29 Apr 2026</p>
+        </div>
+        <div class="pd-price-card">
+          <h3>Location</h3>
+          <p class="note" style="margin-top:0.5rem;">Hotel Bourou Seikaiha, Awaji Island, Hyogo Prefecture, Japan</p>
+        </div>
+      </div>
+
+      <p style="font-size:0.875rem; color:#64748b; margin-top:1rem;">Fee includes accommodation at Hotel Bourou Seikaiha, meals, and local transportation in Japan.</p>
+
+      <div class="pd-cta">
+        <button class="btn-closed" disabled>Registration Closed</button>
+        <a href="programs.html" class="btn-learn">Explore Other Programmes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <main class="pd-section bg-white">
+    <div class="container-large" style="padding:0 1.5rem;">
+      <!-- Highlights -->
+      <section>
+        <h2 class="font-serif">Programme Highlights</h2>
+        <ul class="pd-list">
+          <li>Build AI Solutions for Real Human Impact</li>
+          <li>Master Human-Centred Design &amp; Innovation Thinking</li>
+          <li>Learn How Startups Are Built &mdash; from Idea to Execution</li>
+          <li>Prototype Real Tech Solutions in Hands-On Workshops</li>
+          <li>Collaborate in High-Performing Global Teams</li>
+          <li>Pitch Like a Founder to Industry Experts</li>
+        </ul>
+      </section>
+
+      <!-- Why participate -->
+      <section>
+        <h2 class="font-serif">Why Participate</h2>
+        <ul class="pd-list">
+          <li>Learn from world-class experts: Led by a senior academic from Imperial College London and an experienced venture capital fund manager.</li>
+          <li>Work on real-world challenges with industry: Collaborate with teams from Pasona Group on real business and innovation projects.</li>
+          <li>Bridge technology and entrepreneurship: Gain both technical skills and startup thinking, rare in pre-university programmes.</li>
+        </ul>
+      </section>
+
+      <!-- What's included -->
+      <section>
+        <h2 class="font-serif">What's Included</h2>
+        <ul class="pd-list">
+          <li>Accommodation at Hotel Bourou Seikaiha (shared twin rooms)</li>
+          <li>Daily meals throughout the programme</li>
+          <li>All teaching, workshops and materials</li>
+          <li>Local transportation in Japan</li>
+          <li>Cultural activities and site visits (including theme parks)</li>
+        </ul>
+      </section>
+
+      <!-- Learning outcomes -->
+      <section>
+        <h2 class="font-serif">Learning Outcomes</h2>
+        <ul class="pd-list">
+          <li>A strong foundation in AI, innovation, and human-centred design</li>
+          <li>Hands-on experience building real-world tech solutions</li>
+          <li>Exposure to venture capital thinking and how startups are evaluated</li>
+          <li>Understanding of how to develop, validate, and pitch business ideas</li>
+          <li>Confidence in teamwork, communication, and presenting to an audience</li>
+          <li>Insight into real-world innovation through collaboration with Pasona Group</li>
+        </ul>
+      </section>
+
+      <!-- Location -->
+      <section>
+        <h2 class="font-serif">Location &amp; Venue</h2>
+        <ul class="pd-list">
+          <li>Hotel Bourou Seikaiha, Awaji Island, Hyogo Prefecture, Japan</li>
+          <li>5-star resort setting with panoramic ocean views</li>
+          <li>Modern conference facilities and dedicated spaces for hands-on learning</li>
+          <li>Traditional Japanese onsen (hot spring) experience for relaxation and well-being</li>
+          <li>Rich cultural surroundings with access to local attractions, dining, and theme parks</li>
+        </ul>
+      </section>
+
+      <!-- Payment process -->
+      <section>
+        <h2 class="font-serif">Payment Process</h2>
+        <ul class="pd-list">
+          <li>A deposit of HK$3,000 is required to secure your place.</li>
+          <li>Applicants who are successfully admitted must pay the full programme fee of HK$17,000 upon acceptance.</li>
+          <li>Early Bird rate &mdash; offer ends 29 Apr 2026 (HK$15,000).</li>
+        </ul>
+      </section>
+
+      <!-- Admission -->
+      <section>
+        <h2 class="font-serif">Admission</h2>
+        <blockquote style="border-left:4px solid var(--brand-primary); padding:1.25rem 1.5rem; background:#f8fafc; border-radius:0.5rem; color:#334155; line-height:1.7;">
+          To enrol in this programme, applicants must complete the application form. To assess the applicants' overall suitability, applicants may be invited to attend an interview. Successful applicants will receive an offer email, which they can then accept (and also pay for the programme fee) to secure their place.
+        </blockquote>
+      </section>
+
+      <!-- FAQ -->
+      <section>
+        <h2 class="font-serif">Frequently Asked Questions</h2>
+        <div>
+          <div class="pd-faq-item"><button>Why should I participate in the Human+Tech Futures Summer Camp in Japan?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">The Human+Tech Futures Summer Camp offers a unique opportunity to explore how technology can improve human well-being through hands-on, real-world learning. Participants will: build and prototype tech-driven solutions using AI and emerging technologies; collaborate in teams to tackle real-world challenges; gain exposure to entrepreneurship and how innovative ideas become viable ventures; work on practical challenges with Pasona Group; experience Japanese culture in the inspiring setting of Awaji Island. This programme is ideal for students who are curious about technology, innovation, and making a meaningful impact in the world.</div></div>
+          <div class="pd-faq-item"><button>How is this programme different from other summer programmes?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">The Human+Tech Futures Summer Camp goes beyond traditional tech camps by combining technology, entrepreneurship, and real-world industry experience in a unique international setting. Participants will: work on real-world challenges in collaboration with Pasona Group; learn from experts, including an academic from Imperial College London and an experienced venture capital fund manager; build and prototype tech-driven solutions, not just learn theory; develop entrepreneurial thinking, from idea creation to pitching; experience Japanese culture while staying on Awaji Island in a premium learning environment. Unlike conventional programmes that focus only on coding or classroom learning, this camp emphasises human-centred innovation, real-world application, and global exposure &mdash; preparing students for the future of technology and business.</div></div>
+          <div class="pd-faq-item"><button>What is included in the programme fee?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">The programme fee covers all core components of the summer camp experience, including: accommodation at Hotel Bourou Seikaiha (shared twin rooms); daily meals throughout the programme; all teaching, workshops, and learning materials; local transportation in Japan, as part of the official programme itinerary; cultural activities and site visits, including local attractions and theme parks.</div></div>
+          <div class="pd-faq-item"><button>What is NOT included in the programme fee?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">International airfare to and from Japan; travel and medical insurance; visa application fees and related costs (if applicable); personal expenses (e.g. shopping, snacks, souvenirs); independent or alternative travel arrangements outside the official programme itinerary; optional activities not included in the scheduled programme.</div></div>
+          <div class="pd-faq-item"><button>What cultural activities are included in the programme?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">Traditional onsen (hot spring) experiences for relaxation and well-being; visits to local attractions and theme parks across the island; exposure to Japan's innovation culture through interactions with local industry professionals, including teams from Pasona Group.</div></div>
+          <div class="pd-faq-item"><button>Are there any prerequisites for this programme?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">No formal prerequisites; requires a genuine interest in technology/innovation/entrepreneurship, curiosity, openness to collaborate. No prior coding experience needed.</div></div>
+          <div class="pd-faq-item"><button>Is this a technology-focused programme?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">No &mdash; the programme combines technology and AI with real-world application; human-centred innovation focusing on well-being; entrepreneurship and business thinking; teamwork and collaboration.</div></div>
+          <div class="pd-faq-item"><button>What accommodation and facilities are provided?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">Hotel Bourou Seikaiha &mdash; a 5-star resort with panoramic ocean views, modern conference facilities, dedicated hands-on learning spaces, and a traditional Japanese onsen.</div></div>
+          <div class="pd-faq-item"><button>Do I need prior experience in technology or AI to participate?<span class="chev"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg></span></button><div class="answer">No, the programme is designed to support beginners; a genuine interest in technology and innovation is all that is required.</div></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="pd-cta-band">
+        <h2 class="font-serif">Ready to Begin Your Journey?</h2>
+        <p>Join the Human+Tech Futures Summer Camp on Awaji Island and build technology that improves lives.</p>
+        <button class="btn-closed" disabled>Registration Closed</button>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-dark.webp" alt="Sapiens Nova Academy">
+          <p data-i18n="footer.brand">Embrace Your Future: Innovate, Heal, Inspire</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/the-sapiens-nova-academy/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/sapiensnovaacademy" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1Y3rBy748u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="f.quick">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#who-we-are" data-i18n="f.who">WHO WE ARE</a></li>
+            <li><a href="programs.html" data-i18n="f.programs">PROGRAMMES</a></li>
+            <li><a href="media.html" data-i18n="f.galleries">GALLERIES</a></li>
+            <li><a href="checkout.html" data-i18n="f.enrol">ENROL NOW</a></li>
+            <li><a href="data-privacy-terms.html" data-i18n="f.privacyTerms">DATA PRIVACY TERMS</a></li>
+            <li><a href="index.html#footer" data-i18n="nav.contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h3 data-i18n="footer.contactus">Contact Us</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="field-label" data-i18n="f.email">Email</p>
+              <a href="mailto:info@sapiens-nova.com">info@sapiens-nova.com</a>
+            </div>
+            <div>
+              <p class="field-label" data-i18n="f.website">Website</p>
+              <a href="https://sapiens-nova.com" target="_blank" rel="noopener noreferrer">sapiens-nova.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="f.rights">&copy; 2026 Sapiens Nova. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="data-privacy-terms.html" data-i18n="f.privacy">Privacy Policy</a>
+          <a href="index.html#footer" data-i18n="f.tos">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chat-widget" aria-label="Open chat">
+    <img src="../assets/icons/sapiens-logo.svg" alt="Sapiens AI">
+  </button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

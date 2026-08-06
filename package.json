@@ -1,0 +1,9 @@
+{
+  "name": "nova-academy-intern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Working directory wrapper - delegates npm run dev to the sapiens-nova-clone project",
+  "scripts": {
+    "dev": "node sapiens-nova-clone/server.js"
+  }
+}

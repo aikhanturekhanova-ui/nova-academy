@@ -1,0 +1,11 @@
+{
+  "builds": [
+    { "src": "sapiens-nova-clone/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/sapiens-nova-clone/assets/$1" },
+    { "src": "/favicon.ico", "dest": "/sapiens-nova-clone/assets/favicon.ico" },
+    { "src": "/", "dest": "/sapiens-nova-clone/pages/index.html" },
+    { "src": "/(.*)", "dest": "/sapiens-nova-clone/pages/$1" }
+  ]
+}

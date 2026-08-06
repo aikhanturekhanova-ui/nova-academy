@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Enrol in Sapiens Nova Academy programmes.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon.ico">
+  <title>Enroll Now - Sapiens Nova Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="container-large">
+      <div class="mobile-only nav-row">
+        <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+      <div class="nav-row desktop-only" style="display:grid;">
+        <div class="nav-left">
+          <a href="index.html#who-we-are" class="nav-link" data-i18n="nav.who">WHO WE ARE</a>
+          <a href="programs.html" class="nav-link" data-i18n="nav.programs">PROGRAMMES</a>
+          <a href="media.html" class="nav-link" data-i18n="nav.galleries">GALLERIES</a>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
+        </div>
+        <div class="nav-right">
+          <a href="checkout.html" class="nav-link" data-i18n="cta.enrol">ENROL NOW</a>
+          <a href="index.html#footer" class="nav-link" data-i18n="nav.contact">CONTACT</a>
+          <a href="checkout.html" class="btn-enrol-nav" data-i18n="cta.enrol">ENROL NOW</a>
+        <div class="sn-lang sn-lang-header" data-sn-lang>
+                  <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    <span data-sn-lang-current>EN</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                  </button>
+                  <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+                    <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+                  </ul>
+                </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" aria-label="Mobile navigation">
+    <button id="mobile-menu-close" class="close-btn" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <nav>
+      <a href="index.html#who-we-are" class="mobile-nav-link"><span data-i18n="nav.who">WHO WE ARE</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="programs.html" class="mobile-nav-link"><span data-i18n="nav.programs">PROGRAMMES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="media.html" class="mobile-nav-link"><span data-i18n="nav.galleries">GALLERIES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="checkout.html" class="mobile-nav-link"><span data-i18n="cta.enrol">ENROL NOW</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+      <a href="index.html#footer" class="mobile-nav-link"><span data-i18n="nav.contact">GET IN TOUCH</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+    </nav>
+    <div class="sn-side-lang">
+            <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+            <div class="sn-side-lang-grid" role="group" aria-label="Language">
+              <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+            </div>
+          </div>
+  </aside>
+
+  <!-- ============ CHECKOUT ============ -->
+  <main class="checkout-page bg-white">
+    <div class="checkout-decor" aria-hidden="true">
+      <img src="../assets/icons/victory.svg" alt="" style="width:20%; top:-2%; right:-5%; opacity:0.9;">
+      <img src="../assets/icons/spiky.webp" alt="" style="width:15%; bottom:-4%; left:-6%; opacity:0.7; transform:rotate(15deg);">
+      <img src="../assets/icons/circle.svg" alt="" style="width:15%; bottom:20%; right:-5%; opacity:0.8;">
+    </div>
+
+    <div class="checkout-main">
+      <div class="checkout-header">
+        <div class="pill" style="margin-bottom:1rem;"><span class="pill-xl" style="font-size:1rem;">Enrollment</span></div>
+        <h1 class="font-serif" style="font-size:2.5rem; line-height:1.1; color:#000;">Secure Your Spot</h1>
+        <p style="margin-top:1rem; font-size:1.125rem; color:rgb(0 0 0 / 0.7);">Join our innovative educational programmes and unlock your future</p>
+      </div>
+
+      <div style="max-width:1152px; margin:0 auto;">
+        <div style="background:color-mix(in srgb, var(--program-cornfield) 15%, #fff); border:1px solid color-mix(in srgb, var(--program-cornfield) 40%, transparent); border-radius:20px; padding:1.25rem 1.5rem; margin-bottom:2rem;">
+          <p style="font-weight:600; color:#92400e;">Registration Is Closed</p>
+          <p style="font-size:0.875rem; color:#78350f; margin-top:0.25rem;">Registration for the current programmes is now closed. Thank you for your interest.</p>
+          <a href="programs.html" class="btn-learn" style="margin-top:0.75rem;">Back to Programme Page</a>
+        </div>
+
+        <div class="checkout-grid">
+          <form id="checkout-form" novalidate>
+            <div class="checkout-card">
+              <h2 class="form-section-title">Student's Information</h2>
+              <div class="form-grid">
+                <div class="field" style="grid-column:1/-1;">
+                  <label for="programme">Programme <span class="req">*</span></label>
+                  <select id="programme">
+                    <option value="" disabled selected>Select a programme...</option>
+                    <option value="e44c4197-4693-4af6-b697-60a0f1535dad">Imperial College London Motorsport Engineering Summer School</option>
+                    <option value="a01e7a6a-51bd-4648-9f9c-aa92d926c131">Human+Tech Futures Summer Camp</option>
+                  </select>
+                  <p id="programme-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="student_firstName">First Name <span class="req">*</span></label>
+                  <input id="student_firstName" type="text" placeholder="John" autocomplete="given-name">
+                  <p id="student_firstName-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="student_lastName">Last Name <span class="req">*</span></label>
+                  <input id="student_lastName" type="text" placeholder="Doe" autocomplete="family-name">
+                  <p id="student_lastName-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="student_age">Age <span class="req">*</span></label>
+                  <input id="student_age" type="number" min="1" max="100" placeholder="16">
+                  <p id="student_age-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="student_sex">Gender <span class="req">*</span></label>
+                  <select id="student_sex">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <p id="student_sex-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="student_school">Current Attending School <span class="req">*</span></label>
+                  <input id="student_school" type="text" placeholder="ABC International School" autocomplete="organization">
+                  <p id="student_school-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="student_country">Country/Region <span class="req">*</span></label>
+                  <input id="student_country" type="text" placeholder="Hong Kong" autocomplete="country-name">
+                  <p id="student_country-error" class="error"></p>
+                </div>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <h2 class="form-section-title">Your Information</h2>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="firstName">Your First Name <span class="req">*</span></label>
+                  <input id="firstName" type="text" placeholder="John" autocomplete="given-name">
+                  <p id="firstName-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="lastName">Your Last Name <span class="req">*</span></label>
+                  <input id="lastName" type="text" placeholder="Doe" autocomplete="family-name">
+                  <p id="lastName-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="email">Your Email <span class="req">*</span></label>
+                  <input id="email" type="email" placeholder="your@email.com" autocomplete="email">
+                  <p id="email-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="relationship">Your Relationship to Student <span class="req">*</span></label>
+                  <select id="relationship">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="parent">Parent</option>
+                    <option value="guardian">Guardian</option>
+                    <option value="relative">Relative</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <p id="relationship-error" class="error"></p>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone (Optional)</label>
+                  <input id="phone" type="tel" placeholder="+852 1234 5678" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <div id="promo-box" class="promo-box">
+                <p style="font-weight:500; margin-bottom:0.75rem;">Have a discount code?</p>
+                <div class="promo-row">
+                  <input id="promo-code" type="text" placeholder="SNA2026" autocomplete="off">
+                  <button type="button" class="promo-apply">Apply</button>
+                </div>
+                <p class="promo-error" style="display:none;"></p>
+                <div class="promo-success" style="display:none;">
+                  <p style="font-size:0.875rem; color:#166534; font-weight:500;">10% Discount applied!</p>
+                  <p style="font-size:0.75rem; color:#166534;">Demo mode: static copy does not validate codes against the original API.</p>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="order-summary order-summary-desktop">
+            <div class="checkout-card order-summary" style="position:sticky; top:6rem;">
+              <h2 class="form-section-title" style="font-size:1.25rem;">Order Summary</h2>
+              <div id="order-summary-body"></div>
+              <button type="submit" form="checkout-form" class="btn-pay">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Proceed to Payment
+              </button>
+              <div class="secure-note">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                Secure checkout powered by Stripe
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-dark.webp" alt="Sapiens Nova Academy">
+          <p data-i18n="footer.brand">Embrace Your Future: Innovate, Heal, Inspire</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/the-sapiens-nova-academy/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/sapiensnovaacademy" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1Y3rBy748u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="f.quick">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#who-we-are" data-i18n="f.who">WHO WE ARE</a></li>
+            <li><a href="programs.html" data-i18n="f.programs">PROGRAMMES</a></li>
+            <li><a href="media.html" data-i18n="f.galleries">GALLERIES</a></li>
+            <li><a href="checkout.html" data-i18n="f.enrol">ENROL NOW</a></li>
+            <li><a href="data-privacy-terms.html" data-i18n="f.privacyTerms">DATA PRIVACY TERMS</a></li>
+            <li><a href="index.html#footer" data-i18n="nav.contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h3 data-i18n="footer.contactus">Contact Us</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="field-label" data-i18n="f.email">Email</p>
+              <a href="mailto:info@sapiens-nova.com">info@sapiens-nova.com</a>
+            </div>
+            <div>
+              <p class="field-label" data-i18n="f.website">Website</p>
+              <a href="https://sapiens-nova.com" target="_blank" rel="noopener noreferrer">sapiens-nova.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="f.rights">&copy; 2026 Sapiens Nova. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="data-privacy-terms.html" data-i18n="f.privacy">Privacy Policy</a>
+          <a href="index.html#footer" data-i18n="f.tos">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chat-widget" aria-label="Open chat">
+    <img src="../assets/icons/sapiens-logo.svg" alt="Sapiens AI">
+  </button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
