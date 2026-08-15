@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sapiens Nova Academy events - free webinars, info sessions and admission summits online and around the world.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Events - Sapiens Nova Academy">
+  <meta property="og:description" content="Join our free webinars, info sessions and summits.">
+  <meta property="og:site_name" content="Sapiens Nova Academy">
+  <title>Events - Sapiens Nova Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased sn-page">
+
+  <a class="sn-skip" href="#main-content" data-i18n="skip">Skip to content</a>
+
+  <!-- ============ HEADER (unified: nav pills + dropdown + lang + CTA) ============ -->
+  <header class="site-header sn-header">
+    <div class="sn-header-inner">
+      <a href="index.html" class="sn-logo-link" aria-label="Sapiens Nova Academy - Home">
+        <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo sn-nav-logo">
+      </a>
+      <nav class="sn-nav" aria-label="Primary">
+        <a href="index.html#who-we-are" class="sn-nav-link" data-i18n="nav.who">Who We Are</a>
+        <div class="sn-nav-dd" data-sn-nav-dd>
+          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.programs">Programmes</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <ul class="sn-nav-dd-menu" role="menu" aria-label="Programmes">
+            <li role="none"><a href="success-stories.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.stories">Past Programmes</a></li>
+            <li role="none"><a href="upcoming.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.upcoming">Upcoming Programmes</a></li>
+            <li role="none"><a href="media.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.galleries">Galleries</a></li>
+          </ul>
+        </div>
+        <a href="sna-institute.html" class="sn-nav-link" data-i18n="nav.sna">SNA Institute</a>
+        <a href="global-footprint.html" class="sn-nav-link" data-i18n="nav.footprint">Global Footprint</a>
+        <a href="events.html" class="sn-nav-link is-active" data-i18n="nav.events">Events</a>
+            <a href="alumni.html" class="sn-nav-link" data-i18n="nav.alumni">Alumni</a>
+            </nav>
+      <div class="sn-header-actions">
+        <div class="sn-lang sn-lang-header" data-sn-lang>
+          <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            <span data-sn-lang-current>EN</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+            <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+          </ul>
+        </div>
+        <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="cta.enrol">Enrol Now</a>
+        <button id="mobile-menu-btn" class="menu-btn sn-menu-btn" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label:menu.open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" aria-label="Mobile navigation">
+    <div class="sn-mobile-head">
+      <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo">
+      <button id="mobile-menu-close" class="close-btn sn-close-btn" aria-label="Close menu" data-i18n-attr="aria-label:menu.close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <nav class="sn-mobile-nav">
+      <a href="index.html#who-we-are" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.who">Who We Are</span></a>
+      <a href="programs.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.programs">Programmes</span></a>
+      <a href="success-stories.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.stories">Past Programmes</span></a>
+      <a href="upcoming.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.upcoming">Upcoming Programmes</span></a>
+      <a href="media.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.galleries">Galleries</span></a>
+      <a href="sna-institute.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.sna">SNA Institute</span></a>
+      <a href="global-footprint.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.footprint">Global Footprint</span></a>
+      <a href="events.html" class="mobile-nav-link sn-mobile-link is-active"><span data-i18n="nav.events">Events</span></a>
+      <a href="alumni.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.alumni">Alumni</span></a>
+      <a href="index.html#footer" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.contact">Get in Touch</span></a>
+    </nav>
+    <div class="sn-side-lang">
+      <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+      <div class="sn-side-lang-grid" role="group" aria-label="Language">
+        <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+      </div>
+    </div>
+    <div class="sn-mobile-cta-row">
+      <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+    </div>
+  </aside>
+
+  <main id="main-content" class="ev-page">
+    <section class="ev-hero">
+      <div class="sn-container">
+        <p class="sn-eyebrow din" data-i18n="ev.eyebrow">What's On</p>
+        <h1 class="sn-h2" data-i18n="ev.title">Events</h1>
+        <p class="sn-lead" data-i18n="ev.lead">Join our free webinars, info sessions and summits — online and in person around the world.</p>
+      </div>
+    </section>
+
+    <section class="sn-section" id="upcoming-event">
+      <div class="sn-container">
+        <div class="ev-webinar-card">
+          <div>
+            <span class="ev-webinar-badge" data-i18n="ev.webinar.badge">Free Webinar</span>
+            <h2 class="ev-webinar-title" data-i18n="ev.webinar.title">AI: Disruption or Opportunities?</h2>
+            <p class="ev-webinar-desc" data-i18n="ev.webinar.desc">A free 60-minute live webinar on how artificial intelligence is reshaping education, venture capital and careers — and the opportunities it creates for young people. Hosted live on YouTube with Q&amp;A.</p>
+            <div class="ev-when-row">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                <span data-i18n="ev.webinar.when">Friday, 21 August 2026 · 18:00 – 19:00 (HKT)</span>
+              </span>
+            </div>
+            <p class="ev-webinar-host" data-i18n="ev.webinar.host">Hosted by Benny · Co-founder, Sapiens Nova Academy</p>
+            <div class="ev-webinar-actions">
+              <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="ev.webinar.register">Register Now</a>
+              <span class="ev-live-note">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                <span data-i18n="ev.webinar.live">Live on YouTube — Shorts format</span>
+              </span>
+            </div>
+          </div>
+          <div class="ev-webinar-media">
+            <div class="sn-video-embed">
+              <iframe src="https://www.youtube.com/embed/TDJt5czTX0Q" title="AI: Disruption or Opportunities? - poster" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="ev-media-caption" data-i18n="ev.webinar.live">Live on YouTube — Shorts format</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sn-section sn-section-alt" id="past-events">
+      <div class="sn-container">
+        <div class="ev-past-head">
+          <p class="sn-eyebrow din" data-i18n="ev.past.title">Past Events</p>
+          <h2 class="sn-h2" data-i18n="ev.past.title">Past Events</h2>
+          <p class="sn-lead" data-i18n="ev.past.lead">Replays and photo galleries from our previous info sessions and summits.</p>
+        </div>
+        <div class="ev-past-grid">
+          <article class="ev-event">
+            <div class="ev-photo-grid">
+              <button class="ev-photo" type="button" data-lightbox-item="../assets/events/ev-imperial-01.jpg" aria-label="Imperial Summer School 2026 photo">
+                <img src="../assets/events/ev-imperial-01.jpg" alt="Imperial Summer School 2026 photo">
+              </button>
+              <button class="ev-photo" type="button" data-lightbox-item="../assets/events/ev-imperial-02.jpg" aria-label="Imperial Summer School 2026 photo">
+                <img src="../assets/events/ev-imperial-02.jpg" alt="Imperial Summer School 2026 photo">
+              </button>
+              <button class="ev-photo" type="button" data-lightbox-item="../assets/events/ev-imperial-03.jpg" aria-label="Imperial Summer School 2026 photo">
+                <img src="../assets/events/ev-imperial-03.jpg" alt="Imperial Summer School 2026 photo">
+              </button>
+            </div>
+            <div class="ev-event-body">
+              <span class="ev-event-tag" data-i18n="ev.past.imperial.when">April 2026 · Hong Kong &amp; Bangkok</span>
+              <h3 class="ev-event-title" data-i18n="ev.past.imperial.title">Imperial Summer School 2026 — Info Sessions</h3>
+              <p class="ev-event-desc" data-i18n="ev.past.imperial.desc">Online and in-person info sessions for the Imperial College London Motorsport Engineering Summer School, with the programme team and admissions officers.</p>
+            </div>
+          </article>
+          <article class="ev-event">
+            <div class="ev-photo-grid">
+              <button class="ev-photo" type="button" data-lightbox-item="../assets/events/ev-summit-01.jpg" aria-label="Admission Summit 2026 photo">
+                <img src="../assets/events/ev-summit-01.jpg" alt="Admission Summit 2026 photo">
+              </button>
+              <button class="ev-photo" type="button" data-lightbox-item="../assets/events/ev-summit-02.jpg" aria-label="Admission Summit 2026 photo">
+                <img src="../assets/events/ev-summit-02.jpg" alt="Admission Summit 2026 photo">
+              </button>
+              <button class="ev-photo" type="button" data-lightbox-item="../assets/events/ev-summit-03.jpg" aria-label="Admission Summit 2026 photo">
+                <img src="../assets/events/ev-summit-03.jpg" alt="Admission Summit 2026 photo">
+              </button>
+            </div>
+            <div class="ev-event-body">
+              <span class="ev-event-tag" data-i18n="ev.past.summit.when">28 June 2026 · Bangkok</span>
+              <h3 class="ev-event-title" data-i18n="ev.past.summit.title">Admission Summit 2026</h3>
+              <p class="ev-event-desc" data-i18n="ev.past.summit.desc">A full-day summit bringing together parents, students and admissions teams from our partner universities and schools.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sn-lightbox" id="sn-lightbox" aria-hidden="true">
+    <figure class="sn-lightbox-figure">
+      <img class="sn-lightbox-img" src="" alt="">
+      <figcaption class="sn-lightbox-caption"></figcaption>
+    </figure>
+    <button class="sn-lightbox-close" type="button" aria-label="Close" data-lightbox-close data-i18n-attr="aria-label:ev.lightbox.close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <button class="sn-lightbox-prev" type="button" aria-label="Previous" data-lightbox-prev>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+    </button>
+    <button class="sn-lightbox-next" type="button" aria-label="Next" data-lightbox-next>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+    </button>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="sn-footer">
+    <div class="sn-container">
+      <div class="sn-footer-grid">
+        <div class="sn-footer-col">
+          <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="sn-footer-logo">
+          <p class="sn-footer-brand" data-i18n="footer.brand">Embrace Your Future: Venture-Building, Well-Being, Art &amp; Culture.</p>
+          <p class="sn-footer-tag" data-i18n="footer.tagline">Hong Kong · Shenzhen · Tokyo · London · Riyadh</p>
+        </div>
+        <div class="sn-footer-col">
+          <h4 class="sn-footer-title" data-i18n="footer.explore">Explore</h4>
+          <ul class="sn-footer-links">
+            <li><a href="index.html#who-we-are" data-i18n="f.who">Who We Are</a></li>
+            <li><a href="success-stories.html" data-i18n="f.stories">Our Success Stories</a></li>
+            <li><a href="sna-institute.html" data-i18n="f.sna">SNA Institute</a></li>
+            <li><a href="global-footprint.html" data-i18n="f.footprint">Global Footprint</a></li>
+            <li><a href="events.html" data-i18n="f.events">Events</a></li>
+            <li><a href="media.html" data-i18n="f.galleries">Galleries</a></li>
+          </ul>
+        </div>
+        <div class="sn-footer-col">
+          <h4 class="sn-footer-title" data-i18n="footer.programmes">Programmes</h4>
+          <ul class="sn-footer-links">
+            <li><a href="upcoming.html" data-i18n="f.upcoming">Upcoming Programmes</a></li>
+            <li><a href="upcoming.html" data-i18n="f.shenzhen">Shenzhen Tech Catalyst</a></li>
+            <li><a href="upcoming.html" data-i18n="f.imperial2027">Imperial Engineering Summer School 2027</a></li>
+            <li><a href="alumni.html" data-i18n="f.alumni">Our Alumni</a></li>
+          </ul>
+        </div>
+        <div class="sn-footer-col">
+          <h4 class="sn-footer-title" data-i18n="footer.contact">Contact</h4>
+          <ul class="sn-footer-links">
+            <li><a href="mailto:hello@sapiens-nova.com" data-i18n="f.email">hello@sapiens-nova.com</a></li>
+            <li><a href="data-privacy-terms.html" data-i18n="f.privacyTerms">Data Privacy Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sn-footer-bottom">
+        <p data-i18n="footer.rights">© 2026 Sapiens Nova Academy. All rights reserved.</p>
+        <div class="sn-footer-policy">
+          <a href="data-privacy-terms.html" data-i18n="f.privacy">Privacy</a>
+          <a href="data-privacy-terms.html" data-i18n="f.tos">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

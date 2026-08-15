@@ -118,45 +118,44 @@
   /* ---------- 4. Featured Programmes (аналог CurrentlyAvailableProgrammesSection.js) ---------- */
   var PROGRAMMES_DATA = [
     {
-      id: "e44c4197-4693-4af6-b697-60a0f1535dad",
-      slug: "imperial-motorsport",
-      name: "Imperial College London Motorsport Engineering Summer School",
+      id: "sz-tech-catalyst",
+      slug: "sz-tech-catalyst",
+      name: "Shenzhen Tech Catalyst: Idea-to-Pitch Innovation Camp",
       description:
-        "A practical introduction to how engineers generate, modify, and use power in context of motorsport engineering",
+        "A fast-paced innovation camp in Shenzhen, China's Silicon Valley - venture building, company visits and pitching from ideation to investor-ready startups",
+      category: "bootcamp",
+      location: "Shenzhen, China",
+      duration_text: "Dates to be announced",
+      price_cents: 0,
+      currency: "HKD",
+      application_fee: null,
+      early_bird_price_cents: null,
+      age_range: "15-22 years old",
+      language: "English",
+      image: "../assets/images/workshop-image1.webp",
+      video: null,
+      priceOnRequest: true,
+      registrationClosed: false
+    },
+    {
+      id: "imperial-engineering-2027",
+      slug: "imperial-engineering-2027",
+      name: "Imperial Engineering Summer School 2027",
+      description:
+        "An intensive one-week engineering summer school for under-18s at Imperial College London - mechanical engineering through motorsport, hands-on lab workshops and F24 kit car racing",
       category: "course",
       location: "Imperial College London, South Kensington campus, London, UK",
-      duration_text: "July 19-25, 2026",
-      price_cents: 458000,
+      duration_text: "July 12-16, 2027",
+      price_cents: 0,
       currency: "GBP",
-      application_fee: 10000,
-      early_bird_price_cents: 398000,
-      early_bird_deadline: "2026-03-30 23:59:59",
+      application_fee: null,
+      early_bird_price_cents: null,
       age_range: "15-17 years old",
       language: "English",
       image: "../assets/images/programme-imperial-hero.jpeg",
       video: null,
-      registrationClosed: true
-    },
-    {
-      id: "a01e7a6a-51bd-4648-9f9c-aa92d926c131",
-      slug: "human-tech-summer-camp",
-      name: "Human+Tech Futures Summer Camp",
-      description:
-        "Discover how technology can support healthy living. Participants explore AI, sensing and robotics technologies to create prototypes that enhance physical and emotional well-being.",
-      category: "bootcamp",
-      location: "Awaji Island, Japan",
-      duration_text: "July 13-17, 2026",
-      price_cents: 1700000,
-      currency: "HKD",
-      application_fee: null,
-      deposit: 300000,
-      early_bird_price_cents: 1500000,
-      early_bird_deadline: "2026-04-29 23:59:59",
-      age_range: "15-22 years old",
-      language: "English",
-      image: "../assets/images/programme-human-tech.jpg",
-      video: null,
-      registrationClosed: true
+      priceOnRequest: true,
+      registrationClosed: false
     }
   ];
 
@@ -165,8 +164,8 @@
   }
 
   var PROGRAMME_PAGES = {
-    "imperial-motorsport": "programme-imperial.html",
-    "human-tech-summer-camp": "programme-human-tech.html"
+    "sz-tech-catalyst": "upcoming.html",
+    "imperial-engineering-2027": "upcoming.html"
   };
 
   function initFeatured() {
@@ -174,12 +173,17 @@
     document.querySelectorAll("[data-featured]").forEach(function (mount) {
       var grid = document.createElement("div");
       grid.className = "featured-grid";
-      PROGRAMMES_DATA.forEach(function (p, i) {
+      var data = onHome
+        ? PROGRAMMES_DATA.filter(function (p) {
+            return p.slug !== "sz-tech-catalyst" && p.slug !== "imperial-engineering-2027";
+          })
+        : PROGRAMMES_DATA;
+      data.forEach(function (p, i) {
         var dark = i % 2 === 0;
         var card = document.createElement("div");
         card.className = "featured-card";
-        card.style.background = dark ? "var(--brand-stromboli)" : (onHome ? "var(--brand-primary)" : "var(--brand-azure)");
-        card.style.color = "#fff";
+        card.style.background = onHome ? "#fff" : (dark ? "var(--brand-stromboli)" : "var(--brand-primary)");
+        card.style.color = onHome ? "var(--sn-ink)" : "#fff";
 
         var media;
         if (p.video) {
@@ -218,7 +222,7 @@
         card.appendChild(loc);
         card.appendChild(h3);
 
-        if (p.slug === "imperial-motorsport") {
+        if (p.slug === "imperial-motorsport" || p.slug === "imperial-engineering-2027") {
           var banner = document.createElement("div");
           banner.className = "imperial-banner";
           var bText = document.createElement("p");
@@ -423,15 +427,46 @@
     var order = document.getElementById("order-summary-body");
     var orderMobile = document.getElementById("order-summary-mobile-body");
 
+    /* Legacy/closed programmes kept selectable so deep links keep working */
+    var CHECKOUT_EXTRA = [
+      {
+        id: "imperial-motorsport",
+        slug: "imperial-motorsport",
+        name: "Imperial College London Motorsport Engineering Summer School",
+        description: "A practical introduction to how engineers generate, modify and use power in motorsport engineering.",
+        category: "course",
+        location: "London, UK",
+        duration_text: "July 19-25, 2026",
+        price_cents: 458000,
+        currency: "GBP",
+        application_fee: 10000,
+        deposit: 100000,
+        early_bird_price_cents: null,
+        age_range: "15-17 years old",
+        language: "English",
+        image: "../assets/images/programme-imperial-hero.jpeg",
+        video: null,
+        priceOnRequest: false,
+        registrationClosed: true
+      }
+    ];
+
     function selectedProgramme() {
       for (var i = 0; i < PROGRAMMES_DATA.length; i++) {
         if (PROGRAMMES_DATA[i].id === select.value) return PROGRAMMES_DATA[i];
+      }
+      for (var j = 0; j < CHECKOUT_EXTRA.length; j++) {
+        if (CHECKOUT_EXTRA[j].id === select.value) return CHECKOUT_EXTRA[j];
       }
       return null;
     }
 
     function renderOrder() {
       var p = selectedProgramme();
+      var closedBanner = document.getElementById("checkout-closed-banner");
+      if (closedBanner) {
+        closedBanner.style.display = p && p.registrationClosed ? "" : "none";
+      }
       if (!p) {
         order.innerHTML = '<p style="color:rgb(0 0 0 / 0.6); text-align:center; padding:3rem 0;" data-i18n="ck.summary.none">' + snT("ck.summary.none") + '</p>';
         return;
@@ -446,31 +481,40 @@
       html += '<span style="background:var(--program-cornfield); padding:0.25rem 0.75rem; border-radius:9999px; display:inline-block; margin-bottom:0.75rem;"><span style="font-size:0.875rem; color:#fff; text-transform:capitalize;">' + p.category + "</span></span>";
       html += '<p style="font-size:0.875rem; color:rgb(0 0 0 / 0.6); margin-bottom:0.25rem;"><span data-i18n="ck.summary.duration">' + snT("ck.summary.duration") + ':</span> ' + p.duration_text + "</p>";
       html += '<p style="font-size:0.875rem; color:rgb(0 0 0 / 0.6);"><span data-i18n="ck.summary.location">' + snT("ck.summary.location") + ':</span> ' + pLoc + "</p>";
-      html += '<div style="border-top:2px solid rgb(0 0 0 / 0.1); margin-top:1.5rem; padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">';
-      if (p.application_fee) {
-        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.appfee">' + snT("ck.summary.appfee") + ':</span><span>' + fmtMoney(p.application_fee, "GBP") + " " + p.currency + "</span></div>";
-      }
-      if (p.deposit) {
-        html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.deposit">' + snT("ck.summary.deposit") + ':</span><span>' + fmtMoney(p.deposit, "HKD") + " " + p.currency + "</span></div>";
-      }
-      var price = fmtMoney(p.price_cents, p.currency);
-      if (p.early_bird_price_cents) {
+      if (p.registrationClosed) {
+        html += '<div style="background:#fef2f2; border:1px solid #fecaca; border-radius:20px; padding:1rem; margin-top:1.5rem;"><p style="font-size:0.875rem; color:#991b1b;" data-i18n="ck.summary.closed">' + snT("ck.summary.closed") + "</p></div>";
+      } else {
+        html += '<div style="border-top:2px solid rgb(0 0 0 / 0.1); margin-top:1.5rem; padding-top:1.5rem; display:flex; flex-direction:column; gap:0.75rem;">';
+        if (p.application_fee) {
+          html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.appfee">' + snT("ck.summary.appfee") + ':</span><span>' + fmtMoney(p.application_fee, "GBP") + " " + p.currency + "</span></div>";
+        }
+        if (p.deposit) {
+          html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.deposit">' + snT("ck.summary.deposit") + ':</span><span>' + fmtMoney(p.deposit, "HKD") + " " + p.currency + "</span></div>";
+        }
+        if (p.priceOnRequest) {
+          html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.progfee">' + snT("ck.summary.progfee") + ':</span><span data-i18n="ck.summary.onrequest">' + snT("ck.summary.onrequest") + "</span></div>";
+        } else if (p.price_cents === 0) {
+          html += '<div style="display:flex; justify-content:space-between; align-items:baseline; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.progfee">' + snT("ck.summary.progfee") + ':</span><span style="text-align:right;"><span style="font-weight:700; color:#166534; font-size:1rem;" data-i18n="ck.summary.free">' + snT("ck.summary.free") + '</span><span style="display:block; font-size:0.75rem; color:rgb(0 0 0 / 0.5);" data-i18n="ck.summary.free.note">' + snT("ck.summary.free.note") + "</span></span></div>";
+        } else if (p.early_bird_price_cents) {
+        var price = fmtMoney(p.price_cents, p.currency);
         var earlyKey = p.slug === "imperial-motorsport" ? "ck.early.imperial" : "ck.early.human";
         html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.progfee">' + snT("ck.summary.progfee") + ':</span>' +
           '<div style="text-align:right;"><span style="color:#b45309; font-weight:500;">' + fmtMoney(p.early_bird_price_cents, p.currency) + " " + p.currency + "</span>" +
           '<span style="display:block; font-size:0.75rem; color:rgb(0 0 0 / 0.4); text-decoration:line-through;">' + price + " " + p.currency + "</span>" +
           '<span style="display:block; font-size:0.75rem; color:#d97706;" data-i18n="' + earlyKey + '">' + snT(earlyKey) + "</span></div></div>";
       } else {
+        var price = fmtMoney(p.price_cents, p.currency);
         html += '<div style="display:flex; justify-content:space-between; font-size:0.875rem;"><span style="color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.progfee">' + snT("ck.summary.progfee") + ':</span><span>' + price + " " + p.currency + "</span></div>";
       }
       html += "</div>";
-      var charge = p.application_fee ? fmtMoney(p.application_fee, p.currency) : p.deposit ? fmtMoney(p.deposit, p.currency) : fmtMoney(p.price_cents, p.currency);
+      var charge = p.application_fee ? fmtMoney(p.application_fee, p.currency) : p.deposit ? fmtMoney(p.deposit, p.currency) : p.priceOnRequest ? snT("ck.summary.onrequest") : p.price_cents === 0 ? snT("ck.summary.free") : fmtMoney(p.price_cents, p.currency);
       var chargeKey = p.application_fee ? "ck.summary.appfee" : p.deposit ? "ck.summary.deposit" : "ck.summary.progfee";
       html += '<div style="border-top:1px solid rgb(0 0 0 / 0.1); margin-top:1rem; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">' +
         '<div><p style="font-size:1.25rem; font-family:var(--font-serif);" data-i18n="' + chargeKey + '">' + snT(chargeKey) + '</p>' +
         '<p style="font-size:0.75rem; color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.charging">' + snT("ck.summary.charging") + '</p></div>' +
-        '<p style="font-size:1.5rem; font-family:var(--font-serif);">' + charge + " " + p.currency + "</p></div>";
+        '<p style="font-size:1.5rem; font-family:var(--font-serif);">' + charge + (p.priceOnRequest ? "" : " " + p.currency) + "</p></div>";
       html += '<div style="background:color-mix(in srgb, var(--program-cornfield) 30%, transparent); padding:1rem; border-radius:20px; margin-top:1rem;"><p style="font-size:0.875rem; color:rgb(0 0 0 / 0.8);" data-i18n="ck.summary.confirm">' + snT("ck.summary.confirm") + "</p></div>";
+      }
       order.innerHTML = html;
       if (orderMobile) orderMobile.innerHTML = html;
     }
@@ -826,6 +870,83 @@
     snApplyLang(snLang());
   }
 
+  /* ---------- 10d. Unified nav: Programmes dropdown ---------- */
+  function initNavDropdown() {
+    var dd = document.querySelector("[data-sn-nav-dd]");
+    if (!dd) return;
+    var toggle = dd.querySelector(".sn-nav-dd-toggle");
+    function setOpen(v) {
+      dd.classList.toggle("open", v);
+      if (toggle) toggle.setAttribute("aria-expanded", v ? "true" : "false");
+    }
+    /* Pressing the "Programmes" pill only opens the 3-choice menu - it never
+       navigates to the programmes overview page. Pick one of the 3 links
+       to be redirected. Desktop opens on hover (CSS); the pill toggles
+       on click/tap. */
+    if (toggle && menu) {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        setOpen(!dd.classList.contains("open"));
+      });
+    }
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+    document.addEventListener("click", function (e) {
+      if (dd.classList.contains("open") && !dd.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && dd.classList.contains("open")) {
+        setOpen(false);
+        if (toggle) toggle.focus();
+      }
+    });
+  }
+
+  /* ---------- 10e. Lightbox (events photos) ---------- */
+  function initLightbox() {
+    var overlay = document.getElementById("sn-lightbox");
+    if (!overlay) return;
+    var img = overlay.querySelector(".sn-lightbox-img");
+    var caption = overlay.querySelector(".sn-lightbox-caption");
+    var close = overlay.querySelector("[data-lightbox-close]");
+    var prev = overlay.querySelector("[data-lightbox-prev]");
+    var next = overlay.querySelector("[data-lightbox-next]");
+    var items = Array.prototype.slice.call(document.querySelectorAll("[data-lightbox-item]"));
+    var current = -1;
+
+    function show(i) {
+      if (i < 0 || i >= items.length) return;
+      current = i;
+      var item = items[i];
+      img.src = item.getAttribute("data-lightbox-item");
+      var cap = item.getAttribute("data-lightbox-caption") || item.getAttribute("alt") || "";
+      img.alt = cap;
+      caption.textContent = cap;
+      overlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function hide() {
+      overlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    items.forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        show(items.indexOf(el));
+      });
+    });
+    if (close) close.addEventListener("click", hide);
+    if (overlay) overlay.addEventListener("click", function (e) { if (e.target === overlay) hide(); });
+    document.addEventListener("keydown", function (e) {
+      if (!overlay.classList.contains("open")) return;
+      if (e.key === "Escape") hide();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+    if (prev) prev.addEventListener("click", function (e) { e.stopPropagation(); show(current - 1); });
+    if (next) next.addEventListener("click", function (e) { e.stopPropagation(); show(current + 1); });
+  }
+
   /* ---------- 10. Инициализация ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     initMobileMenu();
@@ -845,6 +966,8 @@
     initSnHeaderScroll();
     initSnToTop();
     initSnHeroCue();
+    initNavDropdown();
+    initLightbox();
     initLangSwitcher();
   });
 })();

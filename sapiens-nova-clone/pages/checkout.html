@@ -10,71 +10,87 @@
   <title>Enroll Now - Sapiens Nova Academy</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="antialiased">
+<body class="antialiased sn-page">
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <nav class="container-large">
-      <div class="mobile-only nav-row">
-        <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
-        <button id="mobile-menu-btn" class="menu-btn" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+  <!-- ============ HEADER (unified: nav pills + dropdown + lang + CTA) ============ -->
+  <header class="site-header sn-header">
+    <div class="sn-header-inner">
+      <a href="index.html" class="sn-logo-link" aria-label="Sapiens Nova Academy - Home">
+        <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo sn-nav-logo">
+      </a>
+      <nav class="sn-nav" aria-label="Primary">
+        <a href="index.html#who-we-are" class="sn-nav-link" data-i18n="nav.who">Who We Are</a>
+        <div class="sn-nav-dd" data-sn-nav-dd>
+          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.programs">Programmes</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <ul class="sn-nav-dd-menu" role="menu" aria-label="Programmes">
+            <li role="none"><a href="success-stories.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.stories">Past Programmes</a></li>
+            <li role="none"><a href="upcoming.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.upcoming">Upcoming Programmes</a></li>
+            <li role="none"><a href="media.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.galleries">Galleries</a></li>
+          </ul>
+        </div>
+        <a href="sna-institute.html" class="sn-nav-link" data-i18n="nav.sna">SNA Institute</a>
+        <a href="global-footprint.html" class="sn-nav-link" data-i18n="nav.footprint">Global Footprint</a>
+        <a href="events.html" class="sn-nav-link" data-i18n="nav.events">Events</a>
+            <a href="alumni.html" class="sn-nav-link" data-i18n="nav.alumni">Alumni</a>
+            </nav>
+      <div class="sn-header-actions">
+        <div class="sn-lang sn-lang-header" data-sn-lang>
+          <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            <span data-sn-lang-current>EN</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+            <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+          </ul>
+        </div>
+        <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="cta.enrol">Enrol Now</a>
+        <button id="mobile-menu-btn" class="menu-btn sn-menu-btn" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label:menu.open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
         </button>
       </div>
-      <div class="nav-row desktop-only" style="display:grid;">
-        <div class="nav-left">
-          <a href="index.html#who-we-are" class="nav-link" data-i18n="nav.who">WHO WE ARE</a>
-          <a href="programs.html" class="nav-link" data-i18n="nav.programs">PROGRAMMES</a>
-          <a href="media.html" class="nav-link" data-i18n="nav.galleries">GALLERIES</a>
-        </div>
-        <div style="display:flex; justify-content:center;">
-          <a href="index.html" class="shrink-0"><img src="../assets/images/logo.png" alt="Sapiens Nova Logo" class="nav-logo"></a>
-        </div>
-        <div class="nav-right">
-          <a href="checkout.html" class="nav-link" data-i18n="cta.enrol">ENROL NOW</a>
-          <a href="index.html#footer" class="nav-link" data-i18n="nav.contact">CONTACT</a>
-          <a href="checkout.html" class="btn-enrol-nav" data-i18n="cta.enrol">ENROL NOW</a>
-        <div class="sn-lang sn-lang-header" data-sn-lang>
-                  <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                    <span data-sn-lang-current>EN</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
-                  </button>
-                  <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
-                    <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
-                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
-                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
-                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
-                    <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
-                  </ul>
-                </div>
-        </div>
-      </div>
-    </nav>
+    </div>
   </header>
 
   <div id="mobile-menu-overlay" aria-hidden="true"></div>
   <aside id="mobile-menu" aria-label="Mobile navigation">
-    <button id="mobile-menu-close" class="close-btn" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-    </button>
-    <nav>
-      <a href="index.html#who-we-are" class="mobile-nav-link"><span data-i18n="nav.who">WHO WE ARE</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
-      <a href="programs.html" class="mobile-nav-link"><span data-i18n="nav.programs">PROGRAMMES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
-      <a href="media.html" class="mobile-nav-link"><span data-i18n="nav.galleries">GALLERIES</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
-      <a href="checkout.html" class="mobile-nav-link"><span data-i18n="cta.enrol">ENROL NOW</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
-      <a href="index.html#footer" class="mobile-nav-link"><span data-i18n="nav.contact">GET IN TOUCH</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+    <div class="sn-mobile-head">
+      <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo">
+      <button id="mobile-menu-close" class="close-btn sn-close-btn" aria-label="Close menu" data-i18n-attr="aria-label:menu.close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <nav class="sn-mobile-nav">
+      <a href="index.html#who-we-are" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.who">Who We Are</span></a>
+      <a href="programs.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.programs">Programmes</span></a>
+      <a href="success-stories.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.stories">Past Programmes</span></a>
+      <a href="upcoming.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.upcoming">Upcoming Programmes</span></a>
+      <a href="media.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.galleries">Galleries</span></a>
+      <a href="sna-institute.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.sna">SNA Institute</span></a>
+      <a href="global-footprint.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.footprint">Global Footprint</span></a>
+      <a href="events.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.events">Events</span></a>
+      <a href="alumni.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.alumni">Alumni</span></a>
+      <a href="index.html#footer" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.contact">Get in Touch</span></a>
     </nav>
     <div class="sn-side-lang">
-            <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
-            <div class="sn-side-lang-grid" role="group" aria-label="Language">
-              <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
-              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
-              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
-              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
-              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
-            </div>
-          </div>
+      <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+      <div class="sn-side-lang-grid" role="group" aria-label="Language">
+        <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+        <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+      </div>
+    </div>
+    <div class="sn-mobile-cta-row">
+      <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+    </div>
   </aside>
 
   <!-- ============ CHECKOUT ============ -->
@@ -106,11 +122,12 @@
               <div class="form-grid">
                 <div class="field" style="grid-column:1/-1;">
                   <label for="programme" data-i18n="ck.lbl.programme">Programme <span class="req">*</span></label>
-                  <select id="programme">
-                    <option value="" disabled selected data-i18n="ck.ph.programme">Select a programme...</option>
-                    <option value="e44c4197-4693-4af6-b697-60a0f1535dad" data-i18n="fd.imperial.title">Imperial College London Motorsport Engineering Summer School</option>
-                    <option value="a01e7a6a-51bd-4648-9f9c-aa92d926c131" data-i18n="fd.human.title">Human+Tech Futures Summer Camp</option>
-                  </select>
+<select id="programme" name="programme" required>
+              <option value="" data-i18n="ck.ph.programme">Select a programme...</option>
+              <option value="sz-tech-catalyst" data-i18n="ck.opt.sz">Shenzhen Tech Catalyst (Idea-to-Pitch Innovation Camp) — Free entry</option>
+              <option value="imperial-engineering-2027" data-i18n="ck.opt.imperial2027">Imperial Engineering Summer School 2027 — Price on Request</option>
+              <option value="imperial-motorsport" data-i18n="ck.opt.imperial">Imperial College London Motorsport Engineering Summer School (2026) — Registration Closed</option>
+            </select>
                   <p id="programme-error" class="error"></p>
                 </div>
                 <div class="field">
@@ -229,7 +246,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="../assets/images/logo-dark.webp" alt="Sapiens Nova Academy">
-          <p data-i18n="footer.brand">Embrace Your Future: Innovate, Heal, Inspire</p>
+          <p data-i18n="footer.brand">Embrace Your Future: Venture-Building, Well-Being, Art &amp; Culture</p>
           <div class="footer-socials">
             <a href="https://www.linkedin.com/company/the-sapiens-nova-academy/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -248,6 +265,7 @@
             <li><a href="index.html#who-we-are" data-i18n="f.who">WHO WE ARE</a></li>
             <li><a href="programs.html" data-i18n="f.programs">PROGRAMMES</a></li>
             <li><a href="media.html" data-i18n="f.galleries">GALLERIES</a></li>
+            <li><a href="events.html" data-i18n="f.events">EVENTS</a></li>
             <li><a href="checkout.html" data-i18n="f.enrol">ENROL NOW</a></li>
             <li><a href="data-privacy-terms.html" data-i18n="f.privacyTerms">DATA PRIVACY TERMS</a></li>
             <li><a href="index.html#footer" data-i18n="nav.contact">CONTACT</a></li>

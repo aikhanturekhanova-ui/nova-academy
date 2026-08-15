@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Access private programme galleries for Human+Tech and Imperial Motorsport Engineering programmes.">
+  <meta name="description" content="Upcoming Sapiens Nova Academy programmes - new flagship programmes are being finalised.">
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel="apple-touch-icon" href="../assets/favicon.ico">
-  <title>Programme Galleries - Sapiens Nova Academy</title>
+  <title>Upcoming Programmes - Sapiens Nova Academy</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="antialiased sn-page">
 
-  <!-- ============ HEADER (unified: nav pills + dropdown + lang + CTA) ============ -->
+  <!-- ============ HEADER ============ -->
   <header class="site-header sn-header">
     <div class="sn-header-inner">
       <a href="index.html" class="sn-logo-link" aria-label="Sapiens Nova Academy - Home">
@@ -19,13 +19,13 @@
       </a>
       <nav class="sn-nav" aria-label="Primary">
         <a href="index.html#who-we-are" class="sn-nav-link" data-i18n="nav.who">Who We Are</a>
-        <div class="sn-nav-dd" data-sn-nav-dd>
-          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.programs">Programmes</span>
+        <div class="sn-nav-dd open" data-sn-nav-dd>
+          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="true"><span data-i18n="nav.programs">Programmes</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
           </a>
           <ul class="sn-nav-dd-menu" role="menu" aria-label="Programmes">
             <li role="none"><a href="success-stories.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.stories">Past Programmes</a></li>
-            <li role="none"><a href="upcoming.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.upcoming">Upcoming Programmes</a></li>
+            <li role="none"><a href="upcoming.html" class="sn-nav-dd-link is-active" role="menuitem" data-i18n="nav.upcoming">Upcoming Programmes</a></li>
             <li role="none"><a href="media.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.galleries">Galleries</a></li>
           </ul>
         </div>
@@ -57,6 +57,7 @@
     </div>
   </header>
 
+  <!-- ============ MOBILE MENU ============ -->
   <div id="mobile-menu-overlay" aria-hidden="true"></div>
   <aside id="mobile-menu" aria-label="Mobile navigation">
     <div class="sn-mobile-head">
@@ -69,7 +70,7 @@
       <a href="index.html#who-we-are" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.who">Who We Are</span></a>
       <a href="programs.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.programs">Programmes</span></a>
       <a href="success-stories.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.stories">Past Programmes</span></a>
-      <a href="upcoming.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.upcoming">Upcoming Programmes</span></a>
+      <a href="upcoming.html" class="mobile-nav-link sn-mobile-sub is-active"><span data-i18n="nav.upcoming">Upcoming Programmes</span></a>
       <a href="media.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.galleries">Galleries</span></a>
       <a href="sna-institute.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.sna">SNA Institute</span></a>
       <a href="global-footprint.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.footprint">Global Footprint</span></a>
@@ -92,33 +93,34 @@
     </div>
   </aside>
 
-  <!-- ============ GALLERIES INDEX ============ -->
-  <main class="media-index">
-    <div class="container-large">
-      <p class="eyebrow" data-i18n="gal.eyebrow">Participant access</p>
-      <h1 class="font-serif" data-i18n="gal.title">Programme galleries</h1>
-      <p class="intro" data-i18n="gal.intro">Choose your programme and enter the password shared with participants to view and download its private photos and videos.</p>
-
-      <div class="gallery-grid">
-        <a href="media-human-tech.html" class="gallery-card">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-6 w-6" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 15-5-4L5 19"></path></svg>
+<!-- ============ HERO ============ -->
+  <section class="programs-hero">
+    <div class="inner">
+      <div class="grid">
+        <div class="copy">
+          <div>
+            <span class="pill" style="padding:0.625rem 1.5rem;"><span style="font-size:1rem;" data-i18n="up.eyebrow">Upcoming Programmes</span></span>
           </div>
-          <h2 data-i18n="gal.card.human">Human+Tech Programme</h2>
-          <p data-i18n="gal.card.private">Private gallery &middot; Password required</p>
-          <span class="open"><span data-i18n="gal.card.open">Open gallery</span> <span class="arrow">&rarr;</span></span>
-        </a>
-        <a href="media-imperial-motorsport.html" class="gallery-card">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-6 w-6" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="m21 15-5-4L5 19"></path></svg>
-          </div>
-          <h2 data-i18n="gal.card.imperial">Imperial Motorsport Engineering Programme</h2>
-          <p data-i18n="gal.card.private">Private gallery &middot; Password required</p>
-          <span class="open"><span data-i18n="gal.card.open">Open gallery</span> <span class="arrow">&rarr;</span></span>
-        </a>
+          <h1 data-i18n="up.title">New Programmes Coming Soon</h1>
+          <p data-i18n="up.lead">We're finalising our next flagship programmes — dates, locations and applications will be announced here.</p>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- ============ UPCOMING PROGRAMMES ============ -->
+  <section class="section bg-white" style="padding:6rem 0;">
+    <div class="max-w-7xl" style="padding:2.5rem 1.5rem;">
+      <div class="sn-empty" data-reveal>
+        <span class="pill sn-empty-pill"><span data-i18n="up.soon">Coming Soon</span></span>
+        <h2 class="sn-h2" data-i18n="up.soon.title">The next chapter begins soon.</h2>
+        <p class="sn-lead" data-i18n="up.soon.lead">We are finalising our next flagship programmes. Follow us on social media or get in touch to be the first to know when applications open.</p>
+        <div class="sn-empty-actions">
+          <a href="mailto:hello@sapiens-nova.com" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="up.soon.cta">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ FOOTER ============ -->
   <footer id="footer" class="site-footer">

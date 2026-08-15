@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Global Footprint - Sapiens Nova Academy programmes across Thailand, Japan, the UK, Hong Kong and Saudi Arabia.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Global Footprint - Sapiens Nova Academy">
+  <meta property="og:site_name" content="Sapiens Nova Academy">
+  <title>Global Footprint - Sapiens Nova Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased sn-page">
+
+  <a class="sn-skip" href="#main-content" data-i18n="skip">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header sn-header">
+    <div class="sn-header-inner">
+      <a href="index.html" class="sn-logo-link" aria-label="Sapiens Nova Academy — Home">
+        <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo sn-nav-logo">
+      </a>
+      <nav class="sn-nav" aria-label="Primary">
+        <a href="index.html#who-we-are" class="sn-nav-link" data-i18n="nav.who">Who We Are</a>
+        <div class="sn-nav-dd" data-sn-nav-dd>
+          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.programs">Programmes</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <ul class="sn-nav-dd-menu" role="menu" aria-label="Programmes">
+            <li role="none"><a href="success-stories.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.stories">Past Programmes</a></li>
+            <li role="none"><a href="upcoming.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.upcoming">Upcoming Programmes</a></li>
+            <li role="none"><a href="media.html" class="sn-nav-dd-link" role="menuitem" data-i18n="nav.galleries">Galleries</a></li>
+          </ul>
+        </div>
+        <a href="sna-institute.html" class="sn-nav-link" data-i18n="nav.sna">SNA Institute</a>
+        <a href="global-footprint.html" class="sn-nav-link is-active" data-i18n="nav.footprint">Global Footprint</a>
+        <a href="events.html" class="sn-nav-link" data-i18n="nav.events">Events</a>
+            <a href="alumni.html" class="sn-nav-link" data-i18n="nav.alumni">Alumni</a>
+            </nav>
+      <div class="sn-header-actions">
+<div class="sn-lang sn-lang-header" data-sn-lang>
+          <button type="button" class="sn-lang-btn" data-sn-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            <span data-sn-lang-current>EN</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <ul class="sn-lang-menu" data-sn-lang-menu role="listbox" aria-label="Language">
+            <li><button type="button" role="option" aria-selected="true" data-sn-lang-opt="en">English</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-CN">简体中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="zh-TW">繁體中文</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="th">ไทย</button></li>
+            <li><button type="button" role="option" aria-selected="false" data-sn-lang-opt="ru">Русский</button></li>
+          </ul>
+        </div>
+        <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="cta.enrol">Enrol Now</a>
+        <button id="mobile-menu-btn" class="menu-btn sn-menu-btn" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label:menu.open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" aria-label="Mobile navigation">
+    <div class="sn-mobile-head">
+      <img src="../assets/images/logo.png" alt="Sapiens Nova Academy" class="nav-logo">
+      <button id="mobile-menu-close" class="close-btn sn-close-btn" aria-label="Close menu" data-i18n-attr="aria-label:menu.close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <nav class="sn-mobile-nav">
+      <a href="index.html#who-we-are" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.who">Who We Are</span></a>
+      <a href="programs.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.programs">Programmes</span></a>
+      <a href="success-stories.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.stories">Past Programmes</span></a>
+      <a href="upcoming.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.upcoming">Upcoming Programmes</span></a>
+      <a href="media.html" class="mobile-nav-link sn-mobile-sub"><span data-i18n="nav.galleries">Galleries</span></a>
+      <a href="sna-institute.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.sna">SNA Institute</span></a>
+      <a href="global-footprint.html" class="mobile-nav-link sn-mobile-link is-active"><span data-i18n="nav.footprint">Global Footprint</span></a>
+      <a href="events.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.events">Events</span></a>
+      <a href="alumni.html" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.alumni">Alumni</span></a>
+      <a href="index.html#footer" class="mobile-nav-link sn-mobile-link"><span data-i18n="nav.contact">Get in Touch</span></a>
+    </nav>
+    <div class="sn-side-lang">
+            <span class="sn-side-lang-title" data-i18n="lang.title">Language</span>
+            <div class="sn-side-lang-grid" role="group" aria-label="Language">
+              <button type="button" class="sn-side-lang-btn active" data-sn-lang-opt="en"><span class="sn-lang-code">EN</span>English</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-CN"><span class="sn-lang-code">简</span>简体中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="zh-TW"><span class="sn-lang-code">繁</span>繁體中文</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="th"><span class="sn-lang-code">ไทย</span>ไทย</button>
+              <button type="button" class="sn-side-lang-btn" data-sn-lang-opt="ru"><span class="sn-lang-code">RU</span>Русский</button>
+            </div>
+          </div>
+    <div class="sn-mobile-cta-row">
+      <a href="checkout.html" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ============ HERO ============ -->
+    <section class="sn-page-hero">
+      <div class="sn-container">
+        <span class="sn-eyebrow" data-i18n="gf.hero.eyebrow">Global Footprint</span>
+        <h1 class="sn-h1" data-i18n="gf.hero.title">Five Countries. One Mission.</h1>
+        <p class="sn-lead" data-i18n="gf.hero.lead">Explore the programmes we deliver across Thailand, Japan, the UK, Hong Kong and Saudi Arabia — an alternative way to discover the same content featured under Our Success Stories.</p>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="sn-stats">
+      <div class="sn-container sn-stats-grid">
+        <div class="sn-stat" data-reveal><strong>5</strong><span data-i18n="stats.countries">Countries</span></div>
+        <div class="sn-stat" data-reveal><strong>800+</strong><span data-i18n="stats.students">Students</span></div>
+        <div class="sn-stat" data-reveal><strong>50+</strong><span data-i18n="stats.mentors">Mentors Supporting SNA Institute</span></div>
+        <div class="sn-stat" data-reveal><strong>10+</strong><span data-i18n="stats.partners">Strategic Partners</span></div>
+      </div>
+    </section>
+
+    <!-- ============ COUNTRY: THAILAND ============ -->
+    <section class="sn-section gf-country">
+      <div class="sn-container gf-card">
+        <div class="gf-media" data-reveal>
+          <img src="../assets/images/chula-pitch.jpg" alt="Chulalongkorn University programmes in Thailand" loading="lazy" decoding="async">
+        </div>
+        <div class="gf-body" data-reveal>
+          <span class="gf-flag">TH</span>
+          <h2 class="sn-h2" data-i18n="gf.th.title">Thailand</h2>
+          <p class="gf-desc" data-i18n="gf.th.desc">From a leading national university to an international school in Phuket, our programmes in Thailand nurture the next generation of founders.</p>
+          <ul class="gf-list">
+            <li><a href="success-stories.html#chula" data-i18n="gf.th.p1">Venture Building Programmes — Chulalongkorn University</a></li>
+            <li><a href="success-stories.html#bisp" data-i18n="gf.th.p2">British International School Phuket — Tech &amp; AI Workshop</a></li>
+          </ul>
+          <a href="success-stories.html#chula" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="gf.view">View Success Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COUNTRY: JAPAN ============ -->
+    <section class="sn-section gf-country">
+      <div class="sn-container gf-card">
+        <div class="gf-media" data-reveal>
+          <img src="../assets/images/humantech-01.jpg" alt="Human+Tech Futures Camps in Japan" loading="lazy" decoding="async">
+        </div>
+        <div class="gf-body" data-reveal>
+          <span class="gf-flag">JP</span>
+          <h2 class="sn-h2" data-i18n="gf.jp.title">Japan</h2>
+          <p class="gf-desc" data-i18n="gf.jp.desc">On Awaji Island, students from Osaka University and across Asia build technology ventures that improve hospitality and well-being.</p>
+          <ul class="gf-list">
+            <li><a href="success-stories.html#human-tech" data-i18n="gf.jp.p1">Human+Tech Futures Camp I — Osaka University (Feb 2026)</a></li>
+            <li><a href="success-stories.html#human-tech" data-i18n="gf.jp.p2">Human+Tech Futures Camp II — HK, India &amp; Thailand (July 2026)</a></li>
+          </ul>
+          <a href="success-stories.html#human-tech" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="gf.view">View Success Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COUNTRY: UK ============ -->
+    <section class="sn-section gf-country">
+      <div class="sn-container gf-card">
+        <div class="gf-media" data-reveal>
+          <img src="../assets/images/imperial-06.jpg" alt="Imperial Engineering Summer School in the UK" loading="lazy" decoding="async">
+        </div>
+        <div class="gf-body" data-reveal>
+          <span class="gf-flag">UK</span>
+          <h2 class="sn-h2" data-i18n="gf.uk.title">United Kingdom</h2>
+          <p class="gf-desc" data-i18n="gf.uk.desc">As an authorised recruitment partner of Imperial College London, we bring under-18s into the heart of one of the world's leading engineering universities.</p>
+          <ul class="gf-list">
+            <li><a href="success-stories.html#imperial" data-i18n="gf.uk.p1">Imperial Engineering Summer School 2026</a></li>
+          </ul>
+          <a href="success-stories.html#imperial" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="gf.view">View Success Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COUNTRY: HONG KONG ============ -->
+    <section class="sn-section gf-country">
+      <div class="sn-container gf-card">
+        <div class="gf-media" data-reveal>
+          <img src="../assets/images/hku-15.jpg" alt="HKU Summer Institute in Hong Kong" loading="lazy" decoding="async">
+        </div>
+        <div class="gf-body" data-reveal>
+          <span class="gf-flag">HK</span>
+          <h2 class="sn-h2" data-i18n="gf.hk.title">Hong Kong</h2>
+          <p class="gf-desc" data-i18n="gf.hk.desc">Through the HKU Summer Institute at the University of Hong Kong, we have delivered three programmes for future founders and well-being advocates.</p>
+          <ul class="gf-list">
+            <li><a href="success-stories.html#hku" data-i18n="gf.hk.p1">NextGen Entrepreneurs Boot Camp</a></li>
+            <li><a href="success-stories.html#hku" data-i18n="gf.hk.p2">Technopreneurship: Launching Solutions through Innovation</a></li>
+            <li><a href="success-stories.html#hku" data-i18n="gf.hk.p3">Future by Design — Well-Being Programme</a></li>
+          </ul>
+          <a href="success-stories.html#hku" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="gf.view">View Success Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COUNTRY: SAUDI ARABIA ============ -->
+    <section class="sn-section gf-country">
+      <div class="sn-container gf-card">
+        <div class="gf-media" data-reveal>
+          <img src="../assets/images/web3-02.jpg" alt="Tech hackathons in Saudi Arabia" loading="lazy" decoding="async">
+        </div>
+        <div class="gf-body" data-reveal>
+          <span class="gf-flag">SA</span>
+          <h2 class="sn-h2" data-i18n="gf.sa.title">Saudi Arabia</h2>
+          <p class="gf-desc" data-i18n="gf.sa.desc">Two major hackathons in Riyadh have established SNA's presence in the Kingdom's fast-growing technology ecosystem.</p>
+          <ul class="gf-list">
+            <li><a href="success-stories.html#ksa" data-i18n="gf.sa.p1">NextG3N Web3 Hackathon</a></li>
+            <li><a href="success-stories.html#ksa" data-i18n="gf.sa.p2">Trust &amp; Pay Hackathon</a></li>
+          </ul>
+          <a href="success-stories.html#ksa" class="sn-cta sn-cta-primary sn-cta-sm" data-i18n="gf.view">View Success Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="sn-section sn-cta-band">
+      <div class="sn-container sn-cta-band-inner" data-reveal>
+        <h2 class="sn-cta-title" data-i18n="cta.title">Embrace Your Future</h2>
+        <p class="sn-cta-sub" data-i18n="cta.sub">Join young leaders from around the world building the ventures of tomorrow.</p>
+        <div class="sn-cta-row">
+          <a href="checkout.html" class="sn-cta sn-cta-inverse sn-cta-lg" data-i18n="cta.enrol">Enrol Now</a>
+          <a href="success-stories.html" class="sn-cta sn-cta-outline-inverse sn-cta-lg" data-i18n="cta.stories">Explore Our Success Stories</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer" class="site-footer sn-footer">
+    <div class="sn-footer-inner">
+      <div class="sn-footer-grid">
+        <div class="sn-footer-brand">
+          <img src="../assets/images/logo.png" alt="Sapiens Nova Academy">
+          <p data-i18n="footer.brand">Embrace Your Future: Venture-Building, Well-Being, Art &amp; Culture.</p>
+          <div class="sn-footer-socials">
+            <a href="https://www.linkedin.com/company/the-sapiens-nova-academy/" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Sapiens Nova Academy on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/sna042026/" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Sapiens Nova Academy on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/p/Sapiens-Nova-Academy-61587794027310/" target="_blank" rel="noopener noreferrer" class="sn-social" aria-label="Sapiens Nova Academy on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="sn-footer-col" aria-label="Explore">
+          <h3 data-i18n="footer.explore">Explore</h3>
+          <a href="index.html#who-we-are" data-i18n="f.who">Who We Are</a>
+          <a href="success-stories.html" data-i18n="f.stories">Our Success Stories</a>
+          <a href="sna-institute.html" data-i18n="f.sna">SNA Institute</a>
+          <a href="global-footprint.html" data-i18n="f.footprint">Global Footprint</a>
+          <a href="media.html" data-i18n="f.galleries">Galleries</a>
+          <a href="events.html" data-i18n="f.events">Events</a>
+        </nav>
+        <nav class="sn-footer-col" aria-label="Programmes">
+          <h3 data-i18n="footer.programmes">Programmes</h3>
+          <a href="upcoming.html" data-i18n="f.upcoming">Upcoming Programmes</a>
+          <a href="upcoming.html" data-i18n="f.shenzhen">Shenzhen Tech Catalyst</a>
+          <a href="upcoming.html" data-i18n="f.imperial2027">Imperial Engineering Summer School 2027</a>
+          <a href="programs.html" data-i18n="f.core">Core Programmes</a>
+          <a href="alumni.html" data-i18n="f.alumni">Our Alumni</a>
+        </nav>
+        <div class="sn-footer-col">
+          <h3 data-i18n="footer.contact">Contact</h3>
+          <a href="mailto:info@sapiens-nova.com">info@sapiens-nova.com</a>
+          <a href="https://sapiens-nova.com" target="_blank" rel="noopener noreferrer">sapiens-nova.com</a>
+          <a href="data-privacy-terms.html" data-i18n="f.privacyTerms">Data Privacy Terms</a>
+        </div>
+      </div>
+      <div class="sn-footer-bottom">
+        <p data-i18n="f.rights">&copy; Sapiens Nova Academy Limited. All rights reserved.</p>
+        <div class="sn-footer-bottom-links">
+          <a href="data-privacy-terms.html" data-i18n="f.privacy">Privacy Policy</a>
+          <a href="data-privacy-terms.html" data-i18n="f.tos">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat widget -->
+  <button class="chat-widget" aria-label="Open chat" data-i18n-attr="aria-label:chat">
+    <img src="../assets/icons/sapiens-logo.svg" alt="Sapiens AI">
+  </button>
+
+  <!-- Back to top -->
+  <button type="button" class="sn-to-top" id="sn-to-top" aria-label="Back to top" data-i18n-attr="aria-label:totop">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
