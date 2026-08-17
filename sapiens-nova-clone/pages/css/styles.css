@@ -1470,3 +1470,67 @@ body.sn-page .sn-footer-policy a { font-size: 0.875rem; padding: 0.5rem; min-hei
   .sn-alumni-videos-title, .sn-alumni-videos-note { grid-column: 1 / -1; }
 }
 
+/* ============================================================
+   SNA INSTITUTE page upgrade: hero mosaic, photo mosaic,
+   mentor cards with ghost numerals + hairline rules
+   (photos in ink-toned monochrome, colour on hover - site identity)
+   ============================================================ */
+.sn-ih-hero { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: clamp(2.5rem, 6vw, 4rem); }
+.sn-ih-hero figure { margin: 0; overflow: hidden; border-radius: 1.25rem; background: var(--sn-tint); }
+.sn-ih-hero img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.04) brightness(0.97); transition: filter 0.5s ease, transform 0.6s ease; }
+.sn-ih-hero figure:hover img { filter: grayscale(0) contrast(1) brightness(1); transform: scale(1.03); }
+.sn-ih-hero-main { aspect-ratio: 4 / 3.1; }
+.sn-ih-hero-sub { display: none; }
+@media (min-width: 768px) {
+  .sn-ih-hero { grid-template-columns: 1.4fr 1fr 1fr; }
+  .sn-ih-hero-main { grid-row: span 2; aspect-ratio: auto; }
+  .sn-ih-hero-sub { display: block; aspect-ratio: 4 / 3; }
+}
+
+#sna-photos .ev-photo-grid { grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0; }
+#sna-photos .ev-photo { border-radius: 1.25rem; }
+#sna-photos .ev-photo:first-child { grid-row: span 2; }
+#sna-photos .ev-photo img { filter: grayscale(1) contrast(1.04) brightness(0.97); transition: filter 0.5s ease, transform 0.6s ease; }
+#sna-photos .ev-photo:hover img { filter: grayscale(0) contrast(1) brightness(1); transform: scale(1.05); }
+@media (min-width: 768px) { #sna-photos .ev-photo-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+
+.sn-ih-mentors .sn-fcard { position: relative; border-top: 2px solid var(--sn-blue); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.sn-ih-mentors .sn-fcard:hover { transform: translateY(-4px); box-shadow: 0 32px 64px -16px rgb(17 24 39 / 0.18); }
+.sn-ih-mentors .sn-fcard-num { position: absolute; top: 1.4rem; right: 1.75rem; font-family: var(--font-serif); font-size: 2rem; line-height: 1; color: rgb(17 24 39 / 0.1); }
+.sn-ih-mentors .sn-fname { padding-right: 3rem; }
+
+/* ---------- Editorial refinements: eyebrow rules, ticker, stagger, lightbox cue ---------- */
+.sn-ih-eyebrow { display: inline-flex; align-items: center; gap: 0.875rem; }
+.sn-ih-eyebrow::before, .sn-ih-eyebrow::after { content: ""; width: 2rem; height: 1px; background: rgb(37 99 235 / 0.5); }
+
+.sn-ih-ticker { overflow: hidden; background: #fff; border-top: 1px solid var(--sn-border); border-bottom: 1px solid var(--sn-border); padding: 1.125rem 0; }
+.sn-ih-ticker-track { display: flex; align-items: center; gap: 2.5rem; width: max-content; animation: sn-marquee 32s linear infinite; }
+.sn-ih-ticker-track span { font-family: var(--font-serif); font-size: 1.125rem; color: var(--sn-ink); white-space: nowrap; }
+.sn-ih-ticker-track i { font-style: normal; color: var(--sn-blue); font-size: 0.875rem; }
+
+/* staggered reveal: hero mosaic + founder cards */
+.sn-ih-hero > figure:nth-child(2) { transition-delay: 0.12s; }
+.sn-ih-hero > figure:nth-child(3) { transition-delay: 0.24s; }
+.sn-ih-hero > figure:nth-child(4) { transition-delay: 0.36s; }
+.sn-founder-grid .sn-fcard:nth-child(2) { transition-delay: 0.12s; }
+.sn-founder-grid .sn-fcard:nth-child(3) { transition-delay: 0.24s; }
+.sn-ih-mosaic .ev-photo:nth-child(2) { transition-delay: 0.08s; }
+.sn-ih-mosaic .ev-photo:nth-child(3) { transition-delay: 0.16s; }
+.sn-ih-mosaic .ev-photo:nth-child(4) { transition-delay: 0.24s; }
+.sn-ih-mosaic .ev-photo:nth-child(5) { transition-delay: 0.32s; }
+
+/* lightbox affordance: gradient + "+" chip on hover */
+#sna-photos .ev-photo::before { content: "+"; position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.7); width: 2.75rem; height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background: rgb(255 255 255 / 0.92); color: var(--sn-blue); font-family: var(--font-serif); font-size: 1.375rem; line-height: 1; opacity: 0; transition: opacity 0.25s ease, transform 0.25s ease; }
+#sna-photos .ev-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(2 6 23 / 0.5), transparent 55%); opacity: 0; transition: opacity 0.3s ease; }
+#sna-photos .ev-photo:hover::before { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+#sna-photos .ev-photo:hover::after { opacity: 1; }
+
+/* stats strip: hairline dividers between figures */
+@media (min-width: 768px) { .sn-stats-grid .sn-stat + .sn-stat { border-left: 1px solid rgb(255 255 255 / 0.14); } }
+
+/* site-wide polish for interior pages */
+body.sn-page ::selection { background: var(--sn-blue); color: #fff; }
+body.sn-page a:focus-visible, body.sn-page button:focus-visible, body.sn-page summary:focus-visible { outline: 3px solid var(--sn-blue); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) { .sn-ih-ticker-track { animation: none; } }
+
