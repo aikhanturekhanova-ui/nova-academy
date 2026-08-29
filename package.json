@@ -4,6 +4,8 @@
   "private": true,
   "description": "Working directory wrapper - delegates npm run dev to the sapiens-nova-clone project",
   "scripts": {
-    "dev": "node sapiens-nova-clone/server.js"
+    "dev": "node sapiens-nova-clone/server.js",
+    "assets:copy": "node sapiens-nova-clone/scripts/copy-assets.js",
+    "screenshots": "node sapiens-nova-clone/scripts/capture-screenshots.js"
   }
 }

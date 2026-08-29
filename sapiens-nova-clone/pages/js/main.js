@@ -513,7 +513,7 @@
         '<div><p style="font-size:1.25rem; font-family:var(--font-serif);" data-i18n="' + chargeKey + '">' + snT(chargeKey) + '</p>' +
         '<p style="font-size:0.75rem; color:rgb(0 0 0 / 0.6);" data-i18n="ck.summary.charging">' + snT("ck.summary.charging") + '</p></div>' +
         '<p style="font-size:1.5rem; font-family:var(--font-serif);">' + charge + (p.priceOnRequest ? "" : " " + p.currency) + "</p></div>";
-      html += '<div style="background:color-mix(in srgb, var(--program-cornfield) 30%, transparent); padding:1rem; border-radius:20px; margin-top:1rem;"><p style="font-size:0.875rem; color:rgb(0 0 0 / 0.8);" data-i18n="ck.summary.confirm">' + snT("ck.summary.confirm") + "</p></div>";
+      html += '<div style="background: var(--program-cornfield); background: color-mix(in srgb, var(--program-cornfield) 30%, transparent); padding:1rem; border-radius:20px; margin-top:1rem;"><p style="font-size:0.875rem; color:rgb(0 0 0 / 0.8);" data-i18n="ck.summary.confirm">' + snT("ck.summary.confirm") + "</p></div>";
       }
       order.innerHTML = html;
       if (orderMobile) orderMobile.innerHTML = html;
@@ -834,37 +834,58 @@
 
   function initLangSwitcher() {
     if (typeof SN_I18N === "undefined") return;
-    var toggle = document.querySelector("[data-sn-lang-toggle]");
-    var menu = document.querySelector("[data-sn-lang-menu]");
-    if (toggle && menu) {
+    document.querySelectorAll("[data-sn-lang]").forEach(function (wrap) {
+      var toggle = wrap.querySelector("[data-sn-lang-toggle]");
+      var menu = wrap.querySelector("[data-sn-lang-menu]");
+      if (!toggle || !menu) return;
       toggle.addEventListener("click", function (e) {
+        e.preventDefault();
         e.stopPropagation();
-        var open = menu.classList.toggle("open");
+        var open = !menu.classList.contains("open");
+        document.querySelectorAll("[data-sn-lang-menu].open").forEach(function (m) {
+          m.classList.remove("open");
+          var t = m.closest("[data-sn-lang]");
+          if (t) {
+            var btn = t.querySelector("[data-sn-lang-toggle]");
+            if (btn) btn.setAttribute("aria-expanded", "false");
+          }
+        });
+        menu.classList.toggle("open", open);
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
       });
-      document.addEventListener("click", function (e) {
-        if (!menu.classList.contains("open")) return;
-        if (menu.contains(e.target) || toggle.contains(e.target)) return;
+    });
+    document.addEventListener("click", function (e) {
+      document.querySelectorAll("[data-sn-lang-menu].open").forEach(function (menu) {
+        var wrap = menu.closest("[data-sn-lang]");
+        if (wrap && wrap.contains(e.target)) return;
         menu.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        var toggle = wrap && wrap.querySelector("[data-sn-lang-toggle]");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
       });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && menu.classList.contains("open")) {
-          menu.classList.remove("open");
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      document.querySelectorAll("[data-sn-lang-menu].open").forEach(function (menu) {
+        menu.classList.remove("open");
+        var wrap = menu.closest("[data-sn-lang]");
+        var toggle = wrap && wrap.querySelector("[data-sn-lang-toggle]");
+        if (toggle) {
           toggle.setAttribute("aria-expanded", "false");
           toggle.focus();
         }
       });
-    }
+    });
     document.querySelectorAll("[data-sn-lang-opt]").forEach(function (b) {
       b.addEventListener("click", function () {
         var code = b.getAttribute("data-sn-lang-opt");
         if (!SN_I18N[code]) return;
         snApplyLang(code);
-        if (menu) {
+        document.querySelectorAll("[data-sn-lang-menu].open").forEach(function (menu) {
           menu.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-        }
+          var wrap = menu.closest("[data-sn-lang]");
+          var toggle = wrap && wrap.querySelector("[data-sn-lang-toggle]");
+          if (toggle) toggle.setAttribute("aria-expanded", "false");
+        });
       });
     });
     snApplyLang(snLang());
@@ -883,7 +904,7 @@
        navigates to the programmes overview page. Pick one of the 3 links
        to be redirected. Desktop opens on hover (CSS); the pill toggles
        on click/tap. */
-    if (toggle && menu) {
+    if (toggle) {
       toggle.addEventListener("click", function (e) {
         e.preventDefault();
         setOpen(!dd.classList.contains("open"));

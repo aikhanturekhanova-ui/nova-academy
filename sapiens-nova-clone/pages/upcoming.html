@@ -19,8 +19,8 @@
       </a>
       <nav class="sn-nav" aria-label="Primary">
         <a href="index.html#who-we-are" class="sn-nav-link" data-i18n="nav.who">Who We Are</a>
-        <div class="sn-nav-dd open" data-sn-nav-dd>
-          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="true"><span data-i18n="nav.programs">Programmes</span>
+        <div class="sn-nav-dd" data-sn-nav-dd>
+          <a href="programs.html" class="sn-nav-link sn-nav-dd-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.programs">Programmes</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
           </a>
           <ul class="sn-nav-dd-menu" role="menu" aria-label="Programmes">
@@ -101,23 +101,50 @@
           <div>
             <span class="pill" style="padding:0.625rem 1.5rem;"><span style="font-size:1rem;" data-i18n="up.eyebrow">Upcoming Programmes</span></span>
           </div>
-          <h1 data-i18n="up.title">New Programmes Coming Soon</h1>
-          <p data-i18n="up.lead">We're finalising our next flagship programmes — dates, locations and applications will be announced here.</p>
+          <h1 data-i18n="up.title">Upcoming Programmes</h1>
+          <p data-i18n="up.lead">Applications are open for our next flagship programmes across China and the UK.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============ UPCOMING PROGRAMMES ============ -->
-  <section class="section bg-white" style="padding:6rem 0;">
-    <div class="max-w-7xl" style="padding:2.5rem 1.5rem;">
-      <div class="sn-empty" data-reveal>
-        <span class="pill sn-empty-pill"><span data-i18n="up.soon">Coming Soon</span></span>
-        <h2 class="sn-h2" data-i18n="up.soon.title">The next chapter begins soon.</h2>
-        <p class="sn-lead" data-i18n="up.soon.lead">We are finalising our next flagship programmes. Follow us on social media or get in touch to be the first to know when applications open.</p>
-        <div class="sn-empty-actions">
-          <a href="mailto:hello@sapiens-nova.com" class="sn-cta sn-cta-primary sn-cta-lg" data-i18n="up.soon.cta">Contact Us</a>
-        </div>
+  <section class="section bg-white sn-upcoming">
+    <div class="sn-container">
+      <div class="up-programme-grid">
+        <article class="up-programme-card" data-reveal>
+          <div class="up-programme-media">
+            <div class="sn-video-embed up-video-embed">
+              <iframe src="https://www.youtube.com/embed/AohMujoOOXg" title="Shenzhen Tech Catalyst" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="up-programme-body">
+            <span class="up-programme-badge" data-i18n="up.sz.badge">Idea-to-Pitch Innovation Camp</span>
+            <h2 class="up-programme-title" data-i18n="up.sz.title">Shenzhen Tech Catalyst: Idea-to-Pitch Innovation Camp</h2>
+            <p class="up-programme-date" data-i18n="up.sz.date">12–16 October 2026 · Shenzhen, China</p>
+            <p class="up-programme-desc" data-i18n="up.sz.desc">A fast-paced innovation camp in the heart of China's Silicon Valley — from idea generation to investor pitching. Includes company visits to leading tech companies and hands-on venture building with China's startup ecosystem.</p>
+            <div class="up-programme-actions">
+              <a href="https://www.youtube.com/watch?v=AohMujoOOXg" target="_blank" rel="noopener noreferrer" class="sn-cta sn-cta-primary" data-i18n="up.sz.video">Watch promotional video</a>
+              <a href="../assets/leaflets/sz-tech-catalyst-leaflet.pdf" target="_blank" rel="noopener noreferrer" class="sn-cta sn-cta-outline" data-i18n="up.leaflet">Download leaflet</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="up-programme-card" data-reveal>
+          <div class="up-programme-media">
+            <img src="../assets/images/programme-imperial-hero.jpeg" alt="Imperial Engineering Summer School 2027" loading="lazy" decoding="async">
+          </div>
+          <div class="up-programme-body">
+            <span class="up-programme-badge" data-i18n="up.imperial.badge">Summer School · UK</span>
+            <h2 class="up-programme-title" data-i18n="up.imperial.title">Imperial Engineering Summer School 2027</h2>
+            <p class="up-programme-date" data-i18n="up.imperial.loc">Imperial College London, UK · 12–16 July 2027</p>
+            <p class="up-programme-desc" data-i18n="up.imperial.desc">An intensive one-week engineering summer school for under-18s at Imperial College London — mechanical engineering through motorsport, hands-on lab workshops, F24 kit car racing, and networking with Imperial alumni and admissions officers.</p>
+            <div class="up-programme-actions">
+              <a href="programme-imperial.html" class="sn-cta sn-cta-primary" data-i18n="up.imperial.cta">Learn more</a>
+              <a href="../assets/leaflets/imperial-engineering-2027-leaflet.pdf" target="_blank" rel="noopener noreferrer" class="sn-cta sn-cta-outline" data-i18n="up.leaflet">Download leaflet</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>

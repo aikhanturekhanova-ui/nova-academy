@@ -4,6 +4,7 @@ const path = require("path");
 
 const PORT = process.env.PORT || 8080;
 const ROOT = path.join(__dirname, "pages");
+const WORKSPACE_ROOT = path.join(__dirname, "..");
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -19,7 +20,8 @@ const MIME = {
   ".ttf": "font/ttf",
   ".mov": "video/quicktime",
   ".mp4": "video/mp4",
-  ".webm": "video/webm"
+  ".webm": "video/webm",
+  ".pdf": "application/pdf"
 };
 
 const server = http.createServer((req, res) => {
@@ -35,25 +37,38 @@ const server = http.createServer((req, res) => {
 
   fs.stat(filePath, (err, stat) => {
     if (err || !stat.isFile()) {
-      // Fallback: assets/ (images, fonts, videos) lives alongside pages/,
-      // so resolve requests like /assets/... against the clone root too.
-      const altPath = path.join(__dirname, urlPath);
+      const tryPaths = [path.join(__dirname, urlPath)];
+      if (urlPath.startsWith("/workspace-media/")) {
+        const rel = decodeURIComponent(urlPath.slice("/workspace-media/".length));
+        tryPaths.push(path.join(WORKSPACE_ROOT, rel));
+      }
       const inside = (p, root) => p === root || p.startsWith(root + path.sep);
-      if (urlPath !== "/" && inside(altPath, __dirname)) {
-        fs.stat(altPath, (altErr, altStat) => {
-          if (altErr || !altStat.isFile()) {
+      let served = false;
+      const attempt = (paths, idx) => {
+        if (idx >= paths.length) {
+          if (!served) {
             res.writeHead(404, { "Content-Type": "text/plain" });
             res.end("404 Not Found: " + urlPath);
+          }
+          return;
+        }
+        const altPath = paths[idx];
+        if (!inside(altPath, __dirname) && !inside(altPath, WORKSPACE_ROOT)) {
+          attempt(paths, idx + 1);
+          return;
+        }
+        fs.stat(altPath, (altErr, altStat) => {
+          if (altErr || !altStat.isFile()) {
+            attempt(paths, idx + 1);
             return;
           }
+          served = true;
           const ext = path.extname(altPath).toLowerCase();
           res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
           fs.createReadStream(altPath).pipe(res);
         });
-        return;
-      }
-      res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("404 Not Found: " + urlPath);
+      };
+      attempt(tryPaths, 0);
       return;
     }
     const ext = path.extname(filePath).toLowerCase();
