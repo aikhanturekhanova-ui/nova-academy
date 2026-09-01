@@ -1125,6 +1125,7 @@ body.sn-home .hero-image { will-change: opacity, transform; }
 .ev-event-when { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--sn-muted); }
 .ev-event-when svg { width: 1rem; height: 1rem; color: var(--sn-blue); flex-shrink: 0; }
 .ev-event-desc { font-size: 0.9375rem; line-height: 1.6; color: var(--sn-muted); }
+.ev-event-desc-notice { margin-top: 0.5rem; font-style: italic; color: var(--sn-muted-soft); font-size: 0.875rem; }
 
 .ev-photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.625rem; padding: 0.75rem 0.75rem 0; }
 .ev-photo { position: relative; aspect-ratio: 4 / 3; border: 0; padding: 0; cursor: zoom-in; border-radius: 0.875rem; overflow: hidden; background: linear-gradient(150deg, #eef2ff, #e0f2fe); }
